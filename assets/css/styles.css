@@ -96,7 +96,7 @@ main {
     flex-direction: column;
     width: 15vw;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    transition: all 300ms;
+    transition: cursor 300ms, background-color 300ms, width 300ms, color 0ms;
 }
 
 .cards:hover {
@@ -104,7 +104,6 @@ main {
     background-color: cadetblue;
     width:17vw;
     color: white;
-    border-radius: 50%;
 }
 
 #bone1, #bone2, #bone3, #bone4 {
