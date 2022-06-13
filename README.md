@@ -1,3 +1,3 @@
 # Projeto Integrador - Grupo 8
 
-E-commerce de bonés
+Zé Boné - E-commerce de bonés
