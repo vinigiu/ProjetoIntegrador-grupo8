@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Checkout</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <header>
@@ -58,89 +58,86 @@
             </div>
         </header>
         <main>
-            <img src="../img/hambuguer-menu.png" alt="" srcset="">
-            <h1 class="checkout">Finalizar Compra</h1>
-            <section>
-                <section>
-                    <aside>
-                        <div>
-                            <h2>Seu Cadastro</h2>
-                            <p>Arthur Philip Prange</p>
-                            <p>arthur.prange@gmail.com</p>
-                            <p>425.354.569-88</p>
-                        </div>
-                        <div>
-                            <h2>Endereço de Entrega</h2>
-                            <p>Arthur Philip Prange</p>
-                            <p>Rua monte alegre,182,154</p>
-                            <p>Perdizes - São Paulo/SP</p>
-                            <p>CEP 05014-000</p>
-                        </div>
-                    </aside>
+            <div class="hamburguer-menu">
+                <img src="../img/hambuguer-menu.png" alt="" srcset="">
+                <h1 class="checkout">Finalizar Compra</h1>
+            </div>
+            <div class="section-main">
+                <section  class="section-form">
+                    <section>
+                        <aside>
+                            <ol>
+                                <li>
+                                    <h2>Seu Cadastro</h2>
+                                    <p>Arthur Philip Prange</p>
+                                    <p>arthur.prange@gmail.com</p>
+                                    <p>425.354.569-88</p>
+                                </li>
+                                <li>
+                                    <h2>Endereço de Entrega</h2>
+                                    <p>Arthur Philip Prange</p>
+                                    <p>Rua monte alegre,182,154</p>
+                                    <p>Perdizes - São Paulo/SP</p>
+                                    <p>CEP 05014-000</p>
+                                </li>
+                            </ol>
+                        </aside>
+                    </section>
+                    <section class="forma-pagamento">
+                        <h2>1. Forma de Pagamento</h2>
+                        <h3>Escolha entre Cartão de Crédito, Boleto Bancário ou PIX</h3>
+                        <form action="">
+                          <div class="inputs-pagamentos">
+                              <input type="radio" id="html" name="credito" value="HTML">
+                              <label for="html">Crédito</label><br>
+                              <input type="radio" id="css" name="boleto" value="CSS">
+                              <label for="css">Boleto Bancário</label><br>
+                              <input type="radio" id="javascript" name="pix" value="JavaScript">
+                              <label for="javascript">Pix</label>
+                          </div>                          
+                          <h3>Escolha a bandeira do seu cartão</h3>
+                            <div class="inputs-bandeiras">
+                                <input type="radio" id="visa" name="age" value="30">
+                                <label for="age1">Visa</label><br>
+                                <input type="radio" id="master" name="age" value="60">
+                                <label for="age2">Master</label><br>
+                                <input type="radio" id="elo" name="age" value="100">
+                                <label for="age3">Elo</label>
+                                <input type="radio" id="dinners" name="age" value="100">
+                                <label for="age3">Dinners</label>
+                                <input type="radio" id="american" name="age" value="100">
+                                <label for="age3">American</label>
+                            </div>
+                            <div class="buttons">
+                                <button>Escolher + produtos</button>
+                                <button>Cancelar Compra</button>
+                                <button>Finalizar Compra</button>
+                            </div>
+                          </form>
+                    </section>
                 </section>
-                <section>
-                    <h2>Forma de Pagamento</h2>
-                    <h3>Escolha entre cartão de crédito, boleto bancário ou PIX</h3>
-                    <ul>
-                        <li class="cartoes">cartão de crédito</li>
-                        <li class="cartoes">boleto</li>
-                        <li class="cartoes">pix</li>
-                    </ul>
-                    <h3>Escolha a abndeira do seu cartão</h3>
-                    <ul>
-                        <li class="1">
-                            <input type="checkbox" name="visa" id="">
-                        </li>
-                        <li class="1">
-                            <input type="checkbox" name="master" id="">
-                        </li>
-                        <li class="1">
-                            <input type="checkbox" name="Elo" id="">
-                        </li>
-                        <li class="1">
-                            <input type="checkbox" name="Dinners" id="">
-                        </li>
-                        <li class="1">
-                            <input type="checkbox" name="American" id="">
-                        </li>
-                    </ul>
+                <section class="carrinho">
+                    <a href="http://">voltar ao carrinho</a>
+                    <h2 class="carrinho-title">Meu Carrinho</h2>
+                    <h2 class="carrinho-confira">Confira os itens do seu pedido</h2>
+                    <h3>aslkjjaçs asdj çaska çllskdk aççsk</h3>
+                    <div class="infos-quantidade">
+                        <p>Quantidade: 1</p>
+                        <p>R$ 9.999,99</p>
+                    </div>
+                    <div class="totais">
+                        <h2>Total a Vista</h2>
+                        <p>R$ 9.999,99</p>
+                    </div>
+                    <div class="totais">
+                        <h2>Total a Prazo</h2>
+                        <p>R$ 9.999,99</p>
+                    </div>
+                    <a href="http://">Alterar meus produtos</a>
                 </section>
-                <div>
-                    <button>Escolher + produtos</button>
-                    <button>Cancelar Compra</button>
-                    <button>Finalizar Compra</button>
-                </div>
-            </section>
-            <section class="carrinho">
-                <a href="http://">voltar ao carrinho</a>
-                <h2>Meu Carrinho</h2>
-                <h2>Confira os itens do seu pedido</h2>
-                <h3>aslkjjaçs asdj çaska çllskdk aççsk</h3>
-                <div>
-                    <p>Quantidade: 1</p>
-                    <p>R$ 9.999,99</p>
-                </div>
-                <div>
-                    <h2>Total a Vista</h2>
-                    <p>R$ 9.999,99</p>
-                </div>
-                <div>
-                    <h2>Total a Prazo</h2>
-                    <p>R$ 9.999,99</p>
-                </div>
-                <a href="http://">Alterar meus produtos</a>
-            </section>
+            </div>
         </main>
         <footer>
-            <div class="footer">
-                <img src="../img/boneLogo.png" alt="logotipo">
-                <ul>
-                    <li class="social1"></li>
-                    <li class="social2"></li>
-                    <li class="social3"></li>
-                    <li class="social4"></li>
-                </ul>
-            </div>
         </footer>
     </body>
 </html>
