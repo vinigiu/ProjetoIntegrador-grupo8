@@ -133,6 +133,7 @@ header {
 
 .section-form {
   margin-right: 1%;
+  width: 70%;
 }
 
 .forma-pagamento h2 {
@@ -286,5 +287,29 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .carrinho {
+    padding: 0;
+  }
+  .section-form {
+    width: 100%;
+  }
+  .buttons :nth-child(3) {
+    margin: 0;
+  }
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .buttons-produtos {
+    margin-bottom: 10px;
+  }
+  .buttons button {
+    margin: 0 0 10px 0;
   }
 }
