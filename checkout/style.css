@@ -1,0 +1,60 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+    background-color: rgb(79, 170, 56);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.imagem-logo{
+    height: 50px;
+}
+
+.menu-princ{
+    padding-right: 0%;
+}
+
+.busca{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.navigation{
+    display: flex;
+    list-style: none;
+    
+}
+
+.navigation li{
+    padding: 0px 10px ;
+}
+
+.search input{
+    width: 50vw;
+    
+}
+
+.search{
+    padding-right: 3%;
+}
+
+.carrinho{
+    padding-right: 30%;
+}
+
+.user{
+    padding-right: 3%;
+}
