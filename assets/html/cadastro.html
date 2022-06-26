@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zé Boné - Tudo para sua cabeça</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="../img/logo/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="nav-green">
+        <section id="header-logo">
+          <article id="logo-img">
+            <img src="/img/logo/zeBoneSemFundo-branco.png" alt="Logo Zé Boné" />
+          </article>
+
+          <article id="logo-name">
+            <h2>Zé Boné</h2>
+          </article>
+        </section>
+
+        <section id="menu">
+          <img
+            src="/img/icones/icons8-cardápio-branco.png"
+            alt="Menu departamentos"
+          />
+        </section>
+
+        <section id="search">
+          <form action="" method="get">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Busque seu produto"
+            />
+          </form>
+        </section>
+
+        <section id="header-icons">
+          <a href="#" id="user">
+            <img src="/img/icones/icons8-usuário-50.png" alt="Usuário" />
+          </a>
+
+          <a href="#" id="cart">
+            <img
+              src="/img/icones/icons8-carrinho-favorito-48.png"
+              alt="Carrinho"
+            />
+          </a>
+        </section>
+      </nav>
+    </header>
+    <!-- CADASTRO -->
+
+    <main>
+        <div class="main-container">
+            <div class="identificacao">
+                <h3>Informe seus dados:</h3>
+              
+                <div class="bloco-form">
+                    
+                    <form>                       
+                        
+                        <input class="email"
+                            type="email"
+                            if="Email"
+                            name="Email"
+                            placeholder="E-mail*"
+                             required
+                        />
+            <br>
+            <br>
+            <br>
+                        <input
+                            type="number"
+                            if="CPF"
+                            name="CPF"
+                            placeholder="CPF*"
+                            required
+                        />
+            <br>
+            <br>
+            <br>
+                    <input
+                            type="text"
+                            if="nome"
+                            name="nome"
+                            placeholder="Nome completo*"
+                            required
+                    />
+            <br>
+            <br>
+            <br>
+                    <label for="dob">Data de Nascimento*</label>
+            <br>
+            <br>
+                    <input
+                        type="date"
+                        if="dob"
+                        name="dob"
+                        placeholder="Data de nascimento*"
+                        required
+                    />
+            <br>
+            <br>
+            <br>
+                    <input
+                        type="tel"
+                        if="cel"
+                        name="cel"
+                        placeholder="Telefone Celular*"
+                        required
+                    />
+            <br>
+            <br>
+            <br>
+                    <input
+                        type="text"
+                        if="endereço"
+                        name="endereço"
+                        placeholder="Endereço*"
+                        required
+                    />
+            <br>
+            <br>
+                    <input
+                        type="number"
+                        if="comlemento"
+                        name="complemento"
+                        placeholder="Complemento*"
+                        required
+                    />
+            <br>
+            <br>
+                
+                   <input
+                        type="number"
+                        if="cep"
+                        name="cep"
+                        placeholder="CEP*"
+                        required
+                   />
+            <br>
+            <br>
+            <br>
+                   <input
+                        type="text"
+                        if="cidade"
+                        name="cidade"
+                        placeholder="Cidade*"
+                        required
+                   />
+            <br>
+            <br>
+            <br>
+                   <label>Estado:</label>
+            <br>
+                  
+                        <select name="Estado" id="estado">
+                            <option selected disabled>Selecione seu estado:</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                            <option value="DF">DF</option>                
+                        </select>
+            <br>
+            <br>
+            <br>
+                    <label>Sexo:</label>
+            <br>
+                        <select name="sexo" id="sexo">                     
+                            
+                            <option selected disabled>Selecione seu gênero:</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+            <br>
+            <br>
+                
+                        
+                
+            <br>
+            <br>
+            <br>
+                    <input
+                        type="password"
+                         if="senha"
+                         name="senha"
+                         placeholder="Senha*"
+                         required
+                    />
+            <br>
+
+                    <input
+                        type="password"
+                        if="senha"
+                        name="senha"
+                        placeholder="Confirme sua Senha*"
+                        required
+                    />
+            <br>
+            <br>
+            <div class="segurança" >
+            <img src="/img/icones/cadeado.png" width="20rem"/>
+        
+           <h4> Compras 100% seguras!</h4>
+        </div>
+           <h6>Seus dados pessoais estão protegidos, todas suas informações são criptografadas para sua segurança.</h6>
+        
+            <br>
+            <br>
+            <br>
+                    <button type="submit">Criar cadastro</button>
+                  
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+         
+        </main>
+<!-- FOOTER -->
+    <footer>
+        <section id="footer-logo">
+            <img src="../img/logo/zeBoneSemFundo.png" alt="Logo Zé Boné">
+        </section>
+
+        <section id="footer-info">
+            <p>Rua dos Bobos, 0 - São Paulo, SP - 02000-02</p>
+        </section>
+
+        <section id="social-icons">
+            <a href=""><img src="/img/icones/whatsapp.png" alt="Whatsapp"></a>
+            <a href=""><img src="/img/icones/instagram.png" alt="Instagram"></a>
+            <a href=""><img src="/img/icones/youtube.png" alt="Youtube"></a>
+            <a href=""><img src="/img/icones/twitter.png" alt="Twitter"></a>
+        </section>
+    </footer>
+</body>
+  </body>
+</html>
