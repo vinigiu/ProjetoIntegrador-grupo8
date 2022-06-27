@@ -72,7 +72,6 @@ main {
     width: 800px;
     display: flex;
     justify-content: space-around;
-    /* background-color: blue; */
 }
 
 .resumoCompra {
@@ -80,8 +79,6 @@ main {
     display: flex;
     justify-content: space-between;
     text-align: left;
-    /* background-color: blueviolet; */
-    /* text-align: right; */
 }
 
 .resumoCompra p {
