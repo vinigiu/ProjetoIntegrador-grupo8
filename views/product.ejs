@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zé Boné - Tudo para sua cabeça</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/stylesProd.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <%- include('partials/header')%>
+    
+    <main>
+        <section id="product">
+            <article id="images">
+                <div id="main-img">
+                    <img src="/images/products/bone1/bone1-frente.webp" alt="Boné 1">
+                </div>
+                <div id="sec-imgs">
+                    <img src="/images/products/bone1/bone1-pic2.webp" alt="boné 1 segunda imagem">
+                    <img src="/images/products/bone1/bone1-pic3.webp" alt="boné 1 terceira imagem">
+                    <img src="/images/products/bone1/bone1-pic4.webp" alt="boné 1 quarta imagem">
+                </div>
+            </article>
+            <article id="prod-descr">
+                <h1 id="prod-name">Boné Laranja</h1>
+                <div id="descr-txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta laborum quibusdam earum hic officiis nisi at dolore et quam ipsum quae ea excepturi accusamus dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro, hic est perspiciatis non voluptatum dolor saepe totam quae facere culpa molestiae impedit vero. Doloremque qui sunt cupiditate blanditiis architecto.
+                </div>
+            </article>
+        </section>
+        <section id="pay-info">
+            <article id="price">
+                <h2>R$ 100,00</h2>
+                <p>ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem juros</p>
+            </article>
+            <article id="frete">
+                <article><h3>Calculadora de frete</h3></article>
+                <form action="" method="post">
+                    <input id="cep" type="numeric" placeholder="Digite seu CEP">
+                    <input id="button" type="button" value="OK">
+                </form>
+            </article>
+            <article id="pay">
+                <div id="buy-button">
+                    <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
+                    <p>Comprar</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <%- include('partials/footer')%>
+</body>
+</html>
