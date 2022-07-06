@@ -15,6 +15,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main{
+  padding-top: 17vh;
+}
+
 header {
   background: #005C53;
   display: -webkit-box;
