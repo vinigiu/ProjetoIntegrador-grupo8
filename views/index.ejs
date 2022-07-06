@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+    
+    <%- include('partials/head')%>
+
+    <%- include('partials/header')%>
+    <main>
+        <section id="banner">
+            <img src="/images/products/Banner_Bone.jpg" alt="Banner Boné">
+        </section>
+
+        <section id="main-prods">
+            <!-- <%for (let produto of produtos) {%>
+                <article class="cards">
+                    <div id="bone">
+                        <img src="<%= produto.image1 %>" alt="Boné principal">
+                    </div>
+                    <div class="info">
+                        <div class="etiqueta">
+                            <h3><%= produto.nome%></h3>
+                            <h4><%= produto.preco%></h4>
+                            <h5>ou até <strong>4x</strong> de <strong><%= produto.valorParcela%></strong> sem juros</h5>
+                        </div>
+                    </div>
+                </article>
+            <%}%>  -->
+            <article class="cards">
+                <div id="bone1"></div>
+
+                <div class="info">
+                    <div class="etiqueta">
+                        <h3>Boné Laranja</h3>
+                        <h4>R$ 100,00</h4>
+                        <h5>ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem juros</h5>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards">
+                <div id="bone2"></div>
+               
+                <div class="info">
+                    <div class="etiqueta">
+                        <h3>Boné Preto Ny</h3>
+                        <h4>R$ 100,00</h4>
+                        <h5>ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem juros</h5>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards">
+                <div id="bone3"></div>
+               
+                <div class="info">
+                    <div class="etiqueta">
+                        <h3>Boné Preto Seahawks</h3>
+                        <h4>R$ 100,00</h4>
+                        <h5>ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem juros</h5>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cards">
+                <div id="bone4"></div>
+                
+                <div class="info">
+                    <div class="etiqueta">
+                        <h3>Boné Roxo</h3>
+                        <h4>R$ 100,00</h4>
+                        <h5>ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem juros</h5>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <%- include('partials/footer')%>
+
+</body>
+</html>
