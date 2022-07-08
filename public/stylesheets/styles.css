@@ -39,6 +39,10 @@ header {
     max-width: 130px;
 }
 
+#header-logo a {
+    text-decoration: none;
+}
+
 #logo-name h2 {
     font-family: "Bebas Neue" ;
     font-size: 3rem;
@@ -99,10 +103,19 @@ main {
     transition: cursor 300ms, background-color 300ms, width 300ms, color 0ms;
 }
 
+.cards a {
+    text-decoration: none;
+    color: black;
+}
+
 .cards:hover {
     cursor:pointer;
     background-color: cadetblue;
     width:26vw;
+    color: white;
+}
+
+.cards:hover a {
     color: white;
 }
 
