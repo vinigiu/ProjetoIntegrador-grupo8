@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zé Boné - Tudo para sua cabeça</title>
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+
+    <main>
+      <section id="banner">
+        <img src="images/products/Banner_Bone.jpg" alt="Banner Boné" />
+      </section>
+
+      <section id="main-prods">
+        <article class="cards">
+          <div id="bone1"></div>
+
+          <div class="info">
+            <div class="etiqueta">
+              <h3>Boné Laranja</h3>
+              <h4>R$ 100,00</h4>
+              <h5>
+                ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem
+                juros
+              </h5>
+            </div>
+          </div>
+        </article>
+
+        <article class="cards">
+          <div id="bone2"></div>
+
+          <div class="info">
+            <div class="etiqueta">
+              <h3>Boné Preto Ny</h3>
+              <h4>R$ 100,00</h4>
+              <h5>
+                ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem
+                juros
+              </h5>
+            </div>
+          </div>
+        </article>
+
+        <article class="cards">
+          <div id="bone3"></div>
+
+          <div class="info">
+            <div class="etiqueta">
+              <h3>Boné Preto Seahawks</h3>
+              <h4>R$ 100,00</h4>
+              <h5>
+                ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem
+                juros
+              </h5>
+            </div>
+          </div>
+        </article>
+
+        <article class="cards">
+          <div id="bone4"></div>
+
+          <div class="info">
+            <div class="etiqueta">
+              <h3>Boné Roxo</h3>
+              <h4>R$ 100,00</h4>
+              <h5>
+                ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem
+                juros
+              </h5>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <%- include ("./partials/footer.ejs")%>
+  </body>
+</html>

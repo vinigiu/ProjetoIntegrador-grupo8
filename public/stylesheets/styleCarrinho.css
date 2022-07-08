@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 1024px;
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+.containerItem {
+   width: 1024px;
+   height: 100px;
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   
+   display: flex;
+   justify-content: space-between;
+   /* align-items: center; */
+   padding: 15px;
+   background-color: #d9d9d9;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.infoItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemDescription {
+    width: 500px;
+}
+
+.imgItem {
+    width:70px;
+    height: 70px;
+}
+
+.imgItem img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.infoItem {
+    padding-left: 10px;
+}
+
+.price {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dadosCompra {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* background-color: aqua; */
+}
+
+.botoes {
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.resumoCompra {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.resumoCompra p {
+    line-height: 35px;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    background-color: #d9d9d9;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #005C53;
+    color: white;
+}
+
+.prices {
+    text-align: right;
+}
