@@ -18,7 +18,7 @@
 
     <%- include('partials/header')%>
         <main>
-            <form action="/manipular/criar" method="post">
+            <form action="/manipular/criar" method="post" enctype="multipart/form-data">
                 <label for="nome">Nome do Produto: </label>
                 <input type="text" name="nome" id="nome">
                 <br>
@@ -33,6 +33,10 @@
                 <br>
                 <label for="descricao">Descrição: </label>
                 <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                <br>
+                <br>
+                <label for="imgNovo">Imagem: </label>
+                <input type="file" name="imgNovo" id="imgNovo">
                 <br>
                 <br>
                 <button type="submit">Enviar</button>
