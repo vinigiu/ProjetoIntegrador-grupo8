@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/stylesLogin.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>Entre - Zé Boné</title>
+  </head>
+  <body>
+  
+  <%- include('partials/header')%>
+  
+   <!-------- LOGIN -------->
+
+    <conainer class="login">
+      <h1>Faça seu Login</h1>
+    </br>
+      <form>
+        <label for="Email ou CPF">Insira seu email ou CPF:</label>
+        </br>
+        <br />
+        <input type="email" name="email ou cpf" placeholder="Email ou CPF" />
+        <br />
+        <br />
+        <label for="Senha">Insira sua senha:</label>
+        
+        <br />
+                
+
+
+        <input type="password" id="senha" name="senha" placeholder="Senha" />
+        <br />
+        <br />
+        <button type="submit">Entrar</button>
+        <br />
+        <br />
+        <label for="lembrar-me">Lembrar-me</label>
+        <input
+          type="checkbox"
+          name="lembrar"
+          id="lembrar"
+          value="lembrar"
+          checked
+        />
+        <br />
+        <a href="#">Esqueci minha senha</a>
+        <br />
+        <a href="#">Não tem conta? Cadastre-se!</a>
+      </form>
+    </conainer>
+  <!-------- FOOTER -------->
+  <%- include('partials/footer')%>
+</body>
+</html>
+
+

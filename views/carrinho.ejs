@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zé Boné - Tudo para sua cabeça</title>
+    <link rel="stylesheet" href="/stylesheets/styleCarrinho.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('partials/header')%>
+
+    <main>
+        <div class="containerItem">
+            <div class="item">
+                <div class="imgItem">
+                    <img src="/images/products/bone1-frente.webp" alt="produto">
+                </div>
+
+                <div class="infoItem">
+                    
+                    <div class="itemDescription">
+                        <p>Boné Laranja</p>
+                    </div>
+
+                    <div class="qtItem">
+                        <p><b>Quantidade:</b></p>
+                        <form action="POST">
+                            <select name="qtItem" id="qtItem">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="price">
+                <div class="priceUnit">
+                    <p><b>Valor Unitário:</b></p>
+                    <p>R$ 10,00</p>
+                </div>
+                <div class="totalUnit">
+                    <p><b>Total:</b></p>
+                    <p>R$ 20,00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerItem">
+            <div class="item">
+                <div class="imgItem">
+                    <img src="/images/products//bone2-frente.webp" alt="produto">
+                </div>
+
+                <div class="infoItem">
+                    
+                    <div class="itemDescription">
+                        <p>Boné Preto</p>
+                    </div>
+
+                    <div class="qtItem">
+                        <p><b>Quantidade:</b></p>
+                        <form action="POST">
+                            <select name="qtItem" id="qtItem">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="price">
+                <div class="priceUnit">
+                    <p><b>Valor Unitário:</b></p>
+                    <p>R$ 10,00</p>
+                </div>
+                <div class="totalUnit">
+                    <p><b>Total:</b></p>
+                    <p>R$ 20,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="dadosCompra">
+            <div class="botoes">
+                <div class="botao">Adicionar mais itens</div>
+                <div class="botao">Finalizar compra</div>
+            </div>
+            <div class="resumoCompra">
+                <div>
+                    <p><strong>Total da compra:</strong></p>
+                    <p><strong>Frete: </strong><button>Calcular</button></p>
+                    <p><strong>Total a pagar:</strong></p>
+                </div>
+                <div class="prices">
+                    <p>R$ 35,00</p>
+                    <p>R$ 5,00</p>
+                    <p>R$ 40,00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+    <%- include('partials/footer')%>
+
+</body>
+</html>
