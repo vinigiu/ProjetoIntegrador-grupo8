@@ -20,7 +20,7 @@ const manipularListaProdutosController = {
 		//escrevendo a lista de produtos atualizada na base de dados JSON
 		listaProdutos.push(arraylast);
 		listaProdutos.push(newProduct);
-		let listaProdutosJSON = JSON.stringify(listaProdutos)
+		let listaProdutosJSON = JSON.stringify(listaProdutos,null,4)
 		fs.writeFileSync(productsFilePath, listaProdutosJSON)
         
         res.render('criar-produto')

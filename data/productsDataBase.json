@@ -1,1 +1,46 @@
-[{"id":1,"nome":"Boné Laranja","preco":"100,00","valorParcela":"25,00","descricao":"Boné na cor laranja ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90","image1":"bone1-frente.webp","image2":"bone1-pic2.webp","image3":"bone1-pic3.webp","image4":"bone1-pic4.webp"},{"id":2,"nome":"Boné Preto NY","preco":"100,00","valorParcela":"25,00","descricao":"Boné na cor preta ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90","image1":"bone2-frente.webp","image2":"bone2-pic2.webp","image3":"bone2-pic3.webp","image4":"bone2-pic4.webp"},{"id":3,"nome":"Boné Preto Seahawks","preco":"100,00","valorParcela":"25,00","descricao":"Boné na cor preta ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90","image1":"bone3-frente.webp","image2":"bone3-pic2.webp","image3":"bone3-pic3.webp","image4":"bone3-pic4.webp"},{"id":4,"nome":"Boné Roxo","preco":"100,00","valorParcela":"25,00","descricao":"Boné na cor roxa ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90","image1":"bone4-frente.webp","image2":"bone4-pic2.webp","image3":"bone4-pic3.webp","image4":"bone4-pic4.webp"}]
+[
+    {
+        "id": 1,
+        "nome": "Boné Laranja",
+        "preco": "100,00",
+        "valorParcela": "25,00",
+        "descricao": "Boné na cor laranja ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90",
+        "image1": "bone1-frente.webp",
+        "image2": "bone1-pic2.webp",
+        "image3": "bone1-pic3.webp",
+        "image4": "bone1-pic4.webp"
+    },
+    {
+        "id": 2,
+        "nome": "Boné Preto NY",
+        "preco": "100,00",
+        "valorParcela": "25,00",
+        "descricao": "Boné na cor preta ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90",
+        "image1": "bone2-frente.webp",
+        "image2": "bone2-pic2.webp",
+        "image3": "bone2-pic3.webp",
+        "image4": "bone2-pic4.webp"
+    },
+    {
+        "id": 3,
+        "nome": "Boné Preto Seahawks",
+        "preco": "100,00",
+        "valorParcela": "25,00",
+        "descricao": "Boné na cor preta ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90",
+        "image1": "bone3-frente.webp",
+        "image2": "bone3-pic2.webp",
+        "image3": "bone3-pic3.webp",
+        "image4": "bone3-pic4.webp"
+    },
+    {
+        "id": 4,
+        "nome": "Boné Roxo",
+        "preco": "100,00",
+        "valorParcela": "25,00",
+        "descricao": "Boné na cor roxa ideal para dias ensolarados e disputas esportivas. Se você for torcedor de basquete, melhor ainda! Mas também pode ser usado em partidas de baseball ou goleiros de futebol dos anos 80/90",
+        "image1": "bone4-frente.webp",
+        "image2": "bone4-pic2.webp",
+        "image3": "bone4-pic3.webp",
+        "image4": "bone4-pic4.webp"
+    }
+]
