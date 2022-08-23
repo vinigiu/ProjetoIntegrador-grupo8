@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const listaProdutos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../models')
 
 const productController = {
-    show: (req,res) => {
-        let productID = req.params.id;
-        const produto = listaProdutos.find(element => element.id == productID)
+    show: async (req,res) => {
+        const produtoID = req.params.id;
+        const produto = await db.Produto.findByPk(produtoID);
         res.render('product', {produto:produto})
     }
 }

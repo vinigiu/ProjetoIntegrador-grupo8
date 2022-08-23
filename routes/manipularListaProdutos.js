@@ -19,7 +19,7 @@ const upload = multer ({storage:storage});
 
 
 router.get('/criar', manipularListaProdutosController.create);
-router.post('/criar', upload.single('imgNovo'), manipularListaProdutosController.saveCriar);
+router.post('/criar', upload.fields([{name:'img1', maxCount:1},{name:'img2', maxCount:1},{name:'img3', maxCount:1},{name:'img4', maxCount:1}]), manipularListaProdutosController.saveCriar);
 
 router.get('/deletar', manipularListaProdutosController.deletar);
 router.post('/deletar', manipularListaProdutosController.saveDeletar);
