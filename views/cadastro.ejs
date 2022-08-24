@@ -26,15 +26,19 @@
 
                         <form action="/users/cadastro" method="POST">
 
-                            <input class="email" type="email" id="Email" name="Email" placeholder="E-mail*" required />
+                            <input class="email" type="email" id="Email" name="email" placeholder="E-mail*" required />
                             <br>
                             <br>
                             <br>
-                            <input type="number" id="CPF" name="CPF" placeholder="CPF*" required />
+                            <input type="number" id="CPF" name="cpf" placeholder="CPF*" required />
                             <br>
                             <br>
                             <br>
-                            <input type="text" id="nome" name="nome" placeholder="Nome completo*" required />
+                            <input type="text" id="nome" name="nome" placeholder="Nome *" required />
+                            <br>
+                            <br>
+                            <br>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome *" required />
                             <br>
                             <br>
                             <br>
@@ -68,7 +72,7 @@
                             <label>Estado:</label>
                             <br>
 
-                            <select name="Estado" id="estado">
+                            <select name="estado" id="estado">
                                 <option selected disabled>Selecione seu estado:</option>
                                 <option value="AC">AC</option>
                                 <option value="AL">AL</option>
@@ -121,7 +125,7 @@
                             <input type="password" id="senha" name="senha" placeholder="Senha*" required />
                             <br>
 
-                            <input type="password" id="senha" name="senha" placeholder="Confirme sua Senha*" required />
+                            <input type="password" id="senha2" name="senha2" placeholder="Confirme sua Senha*" required />
                             <br>
                             <br>
                             <div class="segurança">

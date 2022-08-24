@@ -5,7 +5,8 @@ const usersController = require('../controllers/usersController')
 /* GET users listing. */
 router.get('/cadastro', usersController.cadastroPage);
 router.post('/cadastro', usersController.cadastroExec);
-router.get('/login', usersController.loginExec);
+router.get('/login', usersController.loginPage);
+router.post('/login', usersController.loginExec);
 
 
 module.exports = router;

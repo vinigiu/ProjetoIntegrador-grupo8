@@ -18,44 +18,37 @@
   
   <%- include('partials/header')%>
   
-   <!-------- LOGIN -------->
+<!-------- LOGIN -------->
 
-    <conainer class="login">
+    <div class="login">
       <h1>Faça seu Login</h1>
     </br>
-      <form>
-        <label for="Email ou CPF">Insira seu email ou CPF:</label>
-        </br>
-        <br />
-        <input type="email" name="email ou cpf" placeholder="Email ou CPF" />
-        <br />
-        <br />
-        <label for="Senha">Insira sua senha:</label>
-        
-        <br />
-                
-
-
+      <form action="/users/login" method="POST">
+        <label for="email">Insira seu email:</label>
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="Email" />
+        <br>
+        <br>
+        <label for="senha">Insira sua senha:</label>
+        <br>
+        <br>
         <input type="password" id="senha" name="senha" placeholder="Senha" />
-        <br />
-        <br />
+        <br>
+        <br>
         <button type="submit">Entrar</button>
-        <br />
-        <br />
+        <br>
+        <br>
         <label for="lembrar-me">Lembrar-me</label>
-        <input
-          type="checkbox"
-          name="lembrar"
-          id="lembrar"
-          value="lembrar"
-          checked
-        />
-        <br />
+        <input type="checkbox" name="lembrar" id="lembrar" value="lembrar"/>
+        <br>
+        <br>
         <a href="#">Esqueci minha senha</a>
-        <br />
+        <br>
+        <br>
         <a href="/users/cadastro">Não tem conta? Cadastre-se!</a>
       </form>
-    </conainer>
+    </div>
   <!-------- FOOTER -------->
   <%- include('partials/footer')%>
 </body>
