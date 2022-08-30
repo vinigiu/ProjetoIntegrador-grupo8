@@ -13,7 +13,9 @@ const indexController = {
 		
 		if(await db.Produto.findOne({where:{nome: {[Op.like]:`%${busca}%`}}})){
 			resultado = await db.Produto.findAll({where:{nome: {[Op.like]:`%${busca}%`}}})
-		} else {
+		} else if(await db.Produto.findOne({where:{descricao: {[Op.like]:`%${busca}%`}}})) { 
+            resultado = await db.Produto.findAll({where:{descricao: {[Op.like]:`%${busca}%`}}})
+        } else {
 			resultado = " ";
 		}
 
