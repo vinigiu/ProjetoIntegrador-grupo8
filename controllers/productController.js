@@ -5,7 +5,8 @@ const productController = {
         const produtoID = req.params.id;
         const produto = await db.Produto.findByPk(produtoID);
         res.render('product', {produto:produto})
-    }
+    },
+
 }
 
 module.exports = productController
