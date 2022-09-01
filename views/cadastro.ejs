@@ -17,12 +17,17 @@
 <body>
     <%- include('partials/header')%>
         <!-- CADASTRO -->
-
         <main>
             <div class="main-container">
                 <div class="identificacao">
                     <h3>Informe seus dados:</h3>
-
+                    <% if(typeof errors !== 'undefined') { %>
+                        <ul>
+                            <%for(let error of errors) {%>
+                                <li><%=error.msg%></li>
+                            <%}%>
+                        </ul>
+                    <%}%>
                     <div class="bloco-form">
 
                         <form action="/users/cadastro" method="POST">
@@ -57,7 +62,7 @@
                             <input type="text" id="endereco" name="endereco" placeholder="Endereço*" required />
                             <br>
                             <br>
-                            <input type="number" id="complemento" name="complemento" placeholder="Complemento*"
+                            <input type="number" id="complemento" name="complemento" placeholder="Número*"
                                 required />
                             <br>
                             <br>
