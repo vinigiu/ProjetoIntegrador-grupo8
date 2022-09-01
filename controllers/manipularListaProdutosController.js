@@ -5,8 +5,7 @@ const manipularListaProdutosController = {
         res.render('criar-produto')
     },
     saveCriar: async (req,res) => {
-        console.log(req.files.img1[0].filename)
-        const newProduct = {nome:null,preco:null,cor:null,tamanho:null,marca:null,img1:null,img2:null,img3:null,img4:null,qtd_estoque:null,categorias_id:null,descricao:null}
+        const newProduct = {}
 
 		newProduct.nome = req.body.nome;
 		newProduct.preco = req.body.preco;
