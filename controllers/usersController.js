@@ -1,5 +1,7 @@
 const db = require('../models')
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken')
+const SECRET = require('../config/secret')
 
 const usersController = {
     cadastroPage: (req,res) => {
@@ -56,7 +58,10 @@ const usersController = {
 			return res.render("login", {error: "Senha inválida"})
 		}
 
-        return res.render('carrinho')
+        const token = jwt.sign({user:user},SECRET, {expiresIn:6000})
+        res.cookie('token', token, {maxAge:7000})
+
+        return res.render('index', {auth:true,token:token})
     }
 }
 
