@@ -18,29 +18,35 @@
 
     <%- include('partials/header')%>
         <main>
+            <% if(typeof errors !== 'undefined') { %>
+                <ul>
+                    <%for(let error of errors) {%>
+                        <li><%=error.msg%></li>
+                    <%}%>
+                </ul>
             <form action="/manipular/criar" method="post" enctype="multipart/form-data">
                 <label for="nome">Nome do Produto: </label>
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="nome" id="nome" value="<%=old.nome%>">
                 <br>
                 <br>
                 <label for="preco">Preço (inserir centavos com ponto): </label>
-                <input type="number" name="preco" id="preco">
+                <input type="number" name="preco" id="preco" value="<%=old.preco%>">
                 <br>
                 <br>
                 <label for="cor">Cor do Produto: </label>
-                <input type="text" name="cor" id="cor">
+                <input type="text" name="cor" id="cor" value="<%=old.cor%>">
                 <br>
                 <br>
                 <label for="tamanho">Tamanho do Produto: </label>
-                <input type="text" name="tamanho" id="tamanho">
+                <input type="text" name="tamanho" id="tamanho" value="<%=old.tamanho%>">
                 <br>
                 <br>
                 <label for="marca">Marca do Produto: </label>
-                <input type="text" name="marca" id="marca">
+                <input type="text" name="marca" id="marca" value="<%=old.marca%>">
                 <br>
                 <br>
                 <label for="descricao">Descrição: </label>
-                <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                <textarea name="descricao" id="descricao" cols="30" rows="10" value="<%=old.descricao%>"></textarea>
                 <br>
                 <br>
                 <label for="img1">Imagem 1: </label>
@@ -60,15 +66,68 @@
                 <br>
                 <br>
                 <label for="qtd_estoque">Quantidade em Estoque: </label>
-                <input type="number" name="qtd_estoque" id="qtd_estoque">
+                <input type="number" name="qtd_estoque" id="qtd_estoque" value="<%=old.qtd_estoque%>">
                 <br>
                 <br>
                 <label for="categorias_id">ID da Categoria: </label>
-                <input type="number" name="categorias_id" id="categorias_id">
+                <input type="number" name="categorias_id" id="categorias_id" value="<%=old.categorias_id%>">
                 <br>
                 <br>
                 <button type="submit">Enviar</button>
             </form>
+            <%} else {%>
+                <form action="/manipular/criar" method="post" enctype="multipart/form-data">
+                    <label for="nome">Nome do Produto: </label>
+                    <input type="text" name="nome" id="nome">
+                    <br>
+                    <br>
+                    <label for="preco">Preço (inserir centavos com ponto): </label>
+                    <input type="number" name="preco" id="preco">
+                    <br>
+                    <br>
+                    <label for="cor">Cor do Produto: </label>
+                    <input type="text" name="cor" id="cor">
+                    <br>
+                    <br>
+                    <label for="tamanho">Tamanho do Produto: </label>
+                    <input type="text" name="tamanho" id="tamanho">
+                    <br>
+                    <br>
+                    <label for="marca">Marca do Produto: </label>
+                    <input type="text" name="marca" id="marca">
+                    <br>
+                    <br>
+                    <label for="descricao">Descrição: </label>
+                    <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                    <br>
+                    <br>
+                    <label for="img1">Imagem 1: </label>
+                    <input type="file" name="img1" id="img1">
+                    <br>
+                    <br>
+                    <label for="img2">Imagem 2: </label>
+                    <input type="file" name="img2" id="img2">
+                    <br>
+                    <br>
+                    <label for="img3">Imagem 3: </label>
+                    <input type="file" name="img3" id="img3">
+                    <br>
+                    <br>
+                    <label for="img4">Imagem 4: </label>
+                    <input type="file" name="img4" id="img4">
+                    <br>
+                    <br>
+                    <label for="qtd_estoque">Quantidade em Estoque: </label>
+                    <input type="number" name="qtd_estoque" id="qtd_estoque">
+                    <br>
+                    <br>
+                    <label for="categorias_id">ID da Categoria: </label>
+                    <input type="number" name="categorias_id" id="categorias_id">
+                    <br>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            <%}%>
         </main>
 
     <%- include('partials/footer')%>
