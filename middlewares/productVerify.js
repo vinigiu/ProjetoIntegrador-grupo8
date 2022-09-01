@@ -1,23 +1,23 @@
-const {check, validationResult} = require('express-validator')
+const {body, validationResult} = require('express-validator')
 
 const productVerify = {
     validate: [
-        check('nome')
+        body('nome')
             .notEmpty().withMessage('Nome precisa ser preenchido').bail(),
-        check('preco')
+        body('preco')
             .notEmpty().withMessage('Preço precisa ser preenchido').bail()
             .isNumeric().withMessage('Preço deve ser numérico').bail(),
-        check('cor')
+        body('cor')
             .notEmpty().withMessage('Cor precisa ser preenchida').bail(),
-        check('tamanho')
+        body('tamanho')
             .notEmpty().withMessage('Tamanho precisa ser preenchido').bail(),
-        check('marca')
+        body('marca')
             .notEmpty().withMessage('Marca precisa ser preenchida').bail(),
-        check('descricao')
+        body('descricao')
             .notEmpty().withMessage('Descrição precisa ser preenchida').bail(),
-        check('qtd_estoque')
+        body('qtd_estoque')
             .notEmpty().withMessage('Quantidade em Estoque precisa ser preenchida').bail(),
-        check('categorias_id')
+        body('categorias_id')
             .notEmpty().withMessage('ID da categoria precisa ser preenchida').bail(),
     ],
 
