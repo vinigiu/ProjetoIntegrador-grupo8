@@ -22,6 +22,11 @@
 <!-------- LOGIN -------->
 
     <div class="login">
+      <% if(typeof error !== 'undefined') { %>
+        <ul>
+          <li style="color:red"><%=error%></li>
+        </ul>
+      <%}%>
       <h1>Faça seu Login</h1>
     </br>
       <form action="/users/login" method="POST">

@@ -46,22 +46,18 @@ const usersController = {
 		if(await db.Usuario.findOne({where: {email: emailDigitado}})) {
 			var user = await db.Usuario.findOne({where: {email: emailDigitado}})
 		} else {
-			return res.send("Email inválido")
+			return res.render("login", {error: "Email inválido"})
 		};
 		const emailDb = user.email;
 		const senhaDb = user.senha;
 
-		if (emailDigitado != await emailDb) {
-			return res.send("Email inválido")
-		}
-
         const match = await bcrypt.compare(senhaDigitada, senhaDb)
 
         if (!match) {
-			return res.send("Senha inválida")
+			return res.render("login", {error: "Senha inválida"})
 		}
 
-        return res.send('Bem vindo!')
+        return res.render('carrinho')
     }
 }
 
