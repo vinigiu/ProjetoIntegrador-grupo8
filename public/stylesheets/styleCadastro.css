@@ -42,7 +42,14 @@ div.bloco-form {
   margin-top: 1rem;
 }
 
-input {
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form input, #form select {
+  margin-bottom: 2rem;
   width: 80%;
 }
 

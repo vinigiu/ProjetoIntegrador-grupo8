@@ -27,57 +27,81 @@
                                 <li><%=error.msg%></li>
                             <%}%>
                         </ul>
-                    <%}%>
+                        <div class="bloco-form">
+                            <form id="form" action="/users/cadastro" method="POST">
+                                <input class="email" type="email" id="Email" name="email" placeholder="E-mail*" value="<%=old.email%>" required />
+                                <input type="number" id="CPF" name="cpf" placeholder="CPF*" value="<%=old.cpf%>" required />
+                                <input type="text" id="nome" name="nome" placeholder="Nome *" value="<%=old.nome%>" required />
+                                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome *" value="<%=old.sobrenome%>" required />
+                                <label for="data_nasc">Data de Nascimento*</label>
+                                <input type="date" id="data_nasc" name="data_nasc" placeholder="Data de nascimento*" value="<%=old.data_nasc%>" required />
+                                <input type="tel" id="tel" name="tel" placeholder="Telefone Celular*" value="<%=old.tel%>" required />
+                                <input type="text" id="endereco" name="endereco" placeholder="Endereço*" value="<%=old.endereco%>" required />
+                                <input type="number" id="complemento" name="complemento" placeholder="Número*" value="<%=old.complemento%>" required />
+                                <input type="number" id="cep" name="cep" placeholder="CEP*" value="<%=old.cep%>" required />
+                                <input type="text" id="cidade" name="cidade" placeholder="Cidade*" value="<%=old.cidade%>" required />
+                                <select name="estado" id="estado" value="<%=old.estado%>">
+                                    <option selected disabled>Selecione seu estado:</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AP">AP</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                    <option value="DF">DF</option>
+                                </select>
+                                <select name="genero" id="genero" value="<%=old.genero%>">
+                                    <option selected disabled>Selecione seu gênero:</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                                <input type="password" id="senha" name="senha" placeholder="Senha*" value="<%=old.senha%>" required />
+                                <input type="password" id="senha2" name="senha2" placeholder="Confirme sua Senha*" value="<%=old.senha2%>" required />
+                                <div class="segurança">
+                                    <img src="/images/icones/cadeado.png" width="20rem" />
+                                    <h4> Compras 100% seguras!</h4>
+                                </div>
+                                <h6>Seus dados pessoais estão protegidos, todas suas informações são criptografadas para sua
+                                    segurança.</h6>
+                                <button type="submit">Criar cadastro</button>
+    
+                            </form>
+                        </div>
+                    <%} else {%>
                     <div class="bloco-form">
-
-                        <form action="/users/cadastro" method="POST">
-
-                            <input class="email" type="email" id="Email" name="email" placeholder="E-mail*" required />
-                            <br>
-                            <br>
-                            <br>
+                        <form id="form" action="/users/cadastro" method="POST">
+                            <input class="email" type="email" id="Email" name="email" placeholder="E-mail*" value="" required />
                             <input type="number" id="CPF" name="cpf" placeholder="CPF*" required />
-                            <br>
-                            <br>
-                            <br>
                             <input type="text" id="nome" name="nome" placeholder="Nome *" required />
-                            <br>
-                            <br>
-                            <br>
                             <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome *" required />
-                            <br>
-                            <br>
-                            <br>
                             <label for="data_nasc">Data de Nascimento*</label>
-                            <br>
-                            <br>
                             <input type="date" id="data_nasc" name="data_nasc" placeholder="Data de nascimento*" required />
-                            <br>
-                            <br>
-                            <br>
                             <input type="tel" id="tel" name="tel" placeholder="Telefone Celular*" required />
-                            <br>
-                            <br>
-                            <br>
                             <input type="text" id="endereco" name="endereco" placeholder="Endereço*" required />
-                            <br>
-                            <br>
-                            <input type="number" id="complemento" name="complemento" placeholder="Número*"
-                                required />
-                            <br>
-                            <br>
-
+                            <input type="number" id="complemento" name="complemento" placeholder="Número*"required />
                             <input type="number" id="cep" name="cep" placeholder="CEP*" required />
-                            <br>
-                            <br>
-                            <br>
                             <input type="text" id="cidade" name="cidade" placeholder="Cidade*" required />
-                            <br>
-                            <br>
-                            <br>
-                            <label>Estado:</label>
-                            <br>
-
                             <select name="estado" id="estado">
                                 <option selected disabled>Selecione seu estado:</option>
                                 <option value="AC">AC</option>
@@ -108,47 +132,25 @@
                                 <option value="TO">TO</option>
                                 <option value="DF">DF</option>
                             </select>
-                            <br>
-                            <br>
-                            <br>
-                            <label>Sexo:</label>
-                            <br>
                             <select name="genero" id="genero">
-
                                 <option selected disabled>Selecione seu gênero:</option>
                                 <option value="Feminino">Feminino</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Outro">Outro</option>
                             </select>
-                            <br>
-                            <br>
-
-
-
-                            <br>
-                            <br>
-                            <br>
                             <input type="password" id="senha" name="senha" placeholder="Senha*" required />
-                            <br>
-
                             <input type="password" id="senha2" name="senha2" placeholder="Confirme sua Senha*" required />
-                            <br>
-                            <br>
                             <div class="segurança">
                                 <img src="/images/icones/cadeado.png" width="20rem" />
-
                                 <h4> Compras 100% seguras!</h4>
                             </div>
                             <h6>Seus dados pessoais estão protegidos, todas suas informações são criptografadas para sua
                                 segurança.</h6>
-
-                            <br>
-                            <br>
-                            <br>
                             <button type="submit">Criar cadastro</button>
 
                         </form>
                     </div>
+                    <%}%>
                 </div>
 
             </div>
