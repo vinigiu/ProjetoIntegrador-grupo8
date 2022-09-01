@@ -48,7 +48,6 @@ const usersController = {
 		} else {
 			return res.render("login", {error: "Email inválido"})
 		};
-		const emailDb = user.email;
 		const senhaDb = user.senha;
 
         const match = await bcrypt.compare(senhaDigitada, senhaDb)
