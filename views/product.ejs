@@ -42,10 +42,13 @@
                 </article>
                 <article id="frete">
                     <article><h3>Calculadora de frete</h3></article>
-                    <form action="" method="post">
-                        <input id="cep" type="numeric" placeholder="Digite seu CEP">
-                        <input id="button" type="button" value="OK">
+                    <form action="/produto/<%=produto.id%>" method="post">
+                        <input id="cep" type="numeric" name="cep" placeholder="Digite seu CEP">
+                        <input id="button" name="button" type="submit" value="OK">
                     </form>
+                    <%if(resultado !== 'undefined') {%>
+                        <h3>R$ <%=resultado%></h3>
+                    <%}%>
                 </article>
                 <article id="pay">
                     <div id="buy-button">
@@ -57,5 +60,6 @@
     </main>
 
     <%- include('partials/footer')%>
+    <script src="/javascripts/productEvents.js"></script>
 </body>
 </html>

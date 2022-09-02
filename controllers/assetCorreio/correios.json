@@ -1,0 +1,44 @@
+{
+    "Servicos": {
+        "cServico": [
+            {
+                "Codigo": [
+                    "41106"
+                ],
+                "Valor": [
+                    "22,53"
+                ],
+                "PrazoEntrega": [
+                    "5"
+                ],
+                "ValorSemAdicionais": [
+                    "21,00"
+                ],
+                "ValorMaoPropria": [
+                    "0,00"
+                ],
+                "ValorAvisoRecebimento": [
+                    "0,00"
+                ],
+                "ValorValorDeclarado": [
+                    "1,53"
+                ],
+                "EntregaDomiciliar": [
+                    "S"
+                ],
+                "EntregaSabado": [
+                    "N"
+                ],
+                "obsFim": [
+                    ""
+                ],
+                "Erro": [
+                    "0"
+                ],
+                "MsgErro": [
+                    ""
+                ]
+            }
+        ]
+    }
+}
