@@ -2,7 +2,7 @@
 
 Projeto Integrador - Grupo 8
 
-E-ccomerce fictício de bonés com as seguintes funcionalidades:
+E-comerce fictício de bonés com as seguintes funcionalidades:
   - Cadastro de usuário
   - Login de usuário
   - Cadastro de novos produtos
