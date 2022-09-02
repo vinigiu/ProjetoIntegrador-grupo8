@@ -2,5 +2,18 @@
 
 Projeto Integrador - Grupo 8
 
-Prévia da Landing Page: https://vinigiu.github.io/ProjetoIntegrador-grupo8/assets/html/index.html
+E-ccomerce fictício de bonés com as seguintes funcionalidades:
+  - Cadastro de usuário
+  - Login de usuário
+  - Cadastro de novos produtos
+  - Cálculo de frete via API dos correios
+  - Rotas privadas acessadas somente após login
+  - (Em breve) Carrinho dinâmico
+  - (Em breve) Geração de pedidos
+  - (Em breve) Simualação de pagamento
+ 
+ Stacks:
+  - Front-end: EJS, CSS, Javascript
+  - Back-end: NodeJS, Express
+
 
