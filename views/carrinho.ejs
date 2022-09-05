@@ -16,83 +16,88 @@
     <%- include('partials/header')%>
 
     <main>
-        <div class="containerItem">
-            <div class="item">
-                <div class="imgItem">
-                    <img src="/images/products/bone1-frente.webp" alt="produto">
-                </div>
-
-                <div class="infoItem">
-                    
-                    <div class="itemDescription">
-                        <p>Boné Laranja</p>
+        <%if(produto == 'undefined') {%>
+            <div>Sem produtos</div>
+        <%} else {%>
+            <%if(Array.isArray(produto)) {for(let item of produto){%>
+                <div class="containerItem">
+                    <div class="item">
+                        <div class="imgItem">
+                            <img src="/images/products/<%=item.img1%>" alt="produto">
+                        </div>
+        
+                        <div class="infoItem">
+                            
+                            <div class="itemDescription">
+                                <p><%=item.nome%></p>
+                            </div>
+        
+                            <div class="qtItem">
+                                <p><b>Quantidade:</b></p>
+                                <form action="POST">
+                                    <select name="qtItem" id="qtItem">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </form>
+                            </div>
+        
+                        </div>
                     </div>
-
-                    <div class="qtItem">
-                        <p><b>Quantidade:</b></p>
-                        <form action="POST">
-                            <select name="qtItem" id="qtItem">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </form>
+        
+                    <div class="price">
+                        <div class="priceUnit">
+                            <p><b>Valor Unitário:</b></p>
+                            <p>R$ <%=item.preco%></p>
+                        </div>
+                        <div class="totalUnit">
+                            <p><b>Total:</b></p>
+                            <p>R$ <%=item.preco * 1%></p>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-
-            <div class="price">
-                <div class="priceUnit">
-                    <p><b>Valor Unitário:</b></p>
-                    <p>R$ 10,00</p>
-                </div>
-                <div class="totalUnit">
-                    <p><b>Total:</b></p>
-                    <p>R$ 20,00</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="containerItem">
-            <div class="item">
-                <div class="imgItem">
-                    <img src="/images/products//bone2-frente.webp" alt="produto">
-                </div>
-
-                <div class="infoItem">
-                    
-                    <div class="itemDescription">
-                        <p>Boné Preto</p>
+            <%}} else {%>
+                <div class="containerItem">
+                    <div class="item">
+                        <div class="imgItem">
+                            <img src="/images/products/<%=produto.img1%>" alt="produto">
+                        </div>
+        
+                        <div class="infoItem">
+                            
+                            <div class="itemDescription">
+                                <p><%=produto.nome%></p>
+                            </div>
+        
+                            <div class="qtItem">
+                                <p><b>Quantidade:</b></p>
+                                <form action="POST">
+                                    <select name="qtItem" id="qtItem">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </form>
+                            </div>
+        
+                        </div>
                     </div>
-
-                    <div class="qtItem">
-                        <p><b>Quantidade:</b></p>
-                        <form action="POST">
-                            <select name="qtItem" id="qtItem">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </form>
+        
+                    <div class="price">
+                        <div class="priceUnit">
+                            <p><b>Valor Unitário:</b></p>
+                            <p><%=produto.preco%></p>
+                        </div>
+                        <div class="totalUnit">
+                            <p><b>Total:</b></p>
+                            <p><%=produto.preco * 1%></p>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-
-            <div class="price">
-                <div class="priceUnit">
-                    <p><b>Valor Unitário:</b></p>
-                    <p>R$ 10,00</p>
-                </div>
-                <div class="totalUnit">
-                    <p><b>Total:</b></p>
-                    <p>R$ 20,00</p>
-                </div>
-            </div>
-        </div>
+            <%}%>
+        <%}%>
         <div class="dadosCompra">
             <div class="botoes">
                 <div class="botao">Adicionar mais itens</div>

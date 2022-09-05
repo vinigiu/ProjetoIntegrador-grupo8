@@ -51,10 +51,12 @@
                     <%}%>
                 </article>
                 <article id="pay">
-                    <div id="buy-button">
-                        <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
-                        <p>Comprar</p>
-                    </div>
+                    <form action="/checkout/carrinho" method="post">
+                        <button type="submit" id="buy-button">
+                            <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
+                            <p>Comprar</p>
+                        </button>
+                    </form>
                 </article>
             </section>
     </main>

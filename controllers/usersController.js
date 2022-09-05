@@ -59,7 +59,9 @@ const usersController = {
 		}
 
         const token = jwt.sign({user:user},SECRET, {expiresIn:6000})
-        res.cookie('token', token, {maxAge:7000})
+        req.session.token = token
+        req.session.usuario = user
+        console.log(req.session.usuario)
 
         return res.render('index', {auth:true,token:token})
     }

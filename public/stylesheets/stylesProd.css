@@ -108,6 +108,8 @@ article h3 {
     justify-content: center;
     padding: 1.3rem;
     margin: 2rem 0;
+    width: 100%;
+    border: none
 }
 
 #buy-button img {

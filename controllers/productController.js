@@ -6,6 +6,7 @@ const productController = {
     show: async (req,res,next) => {
         const produtoID = req.params.id;
         const produto = await db.Produto.findByPk(produtoID);
+        req.session.produtoID = produtoID
 
         res.render('product', {produto:produto, resultado:'undefined'})
     },
@@ -20,8 +21,7 @@ const productController = {
         const resultadoTratado = resultado.Servicos.cServico[0].Valor[0]
 
         res.render('product', {produto:produto, resultado:resultadoTratado})
-    }
-
+    },
 }
 
 module.exports = productController
