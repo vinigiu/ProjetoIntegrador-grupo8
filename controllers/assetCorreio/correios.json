@@ -6,13 +6,13 @@
                     "41106"
                 ],
                 "Valor": [
-                    "0,00"
+                    "22,53"
                 ],
                 "PrazoEntrega": [
-                    "0"
+                    "5"
                 ],
                 "ValorSemAdicionais": [
-                    "0,00"
+                    "21,00"
                 ],
                 "ValorMaoPropria": [
                     "0,00"
@@ -21,22 +21,22 @@
                     "0,00"
                 ],
                 "ValorValorDeclarado": [
-                    "0,00"
+                    "1,53"
                 ],
                 "EntregaDomiciliar": [
-                    ""
+                    "S"
                 ],
                 "EntregaSabado": [
-                    ""
+                    "N"
                 ],
                 "obsFim": [
                     ""
                 ],
                 "Erro": [
-                    "-3"
+                    "0"
                 ],
                 "MsgErro": [
-                    "CEP de destino invalido."
+                    ""
                 ]
             }
         ]
