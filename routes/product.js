@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const productController = require('../controllers/productController')
+const correiosController = require('../controllers/correiosController')
 
-/* GET users listing. */
-router.get('/', productController.show);
-router.get('/criar', productController.criar);
-router.get('/deletar', productController.deletar);
-
+router.get('/:id', productController.show);
+router.post('/:id', productController.getPreco);
 
 module.exports = router;

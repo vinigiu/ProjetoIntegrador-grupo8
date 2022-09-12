@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+            <main>
+                <section id="main-prods">
+                    <%if(resultado!=" ") { %>
+                        <%for (let result of resultado) {%>
+                            <a href=" /produto/<%=result.id %>">
+                                <article class="cards">
+                                    <div id="bone-result">
+                                        <img src="/images/products/<%= result.img1 %>" alt="Boné principal"
+                                            id="img-bone-result">
+                                    </div>
+                                    <div class="info">
+                                        <div class="etiqueta">
+                                            <h3>
+                                                <%= result.nome%>
+                                            </h3>
+                                            <h4>R$ <%= result.preco%>
+                                            </h4>
+                                            <h5>ou até <strong>4x</strong> de <strong>R$ <%= result.preco/4%></strong> sem juros
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </article>
+                            </a>
+                        <%}%>
+                    <%} else { %>
+                        <div style="height:69vh">Não existem produtos que correspondam a sua pesquisa</div>
+                    <%}%>
+
+                </section>
+            </main>
+
+            <%- include('partials/footer')%>
+                <script src="/javascripts/results.js"></script>
+    </body>
+
+</html>

@@ -1,45 +1,25 @@
-const listaProdutos = [
-    {
-        nome:'Boné Laranja', 
-        preco:'R$ 100,00', 
-        valorParcela:'R$ 25,00', 
-        image1:'/images/products/bone1/bone1-frente.webp', 
-        image2:'/images/products/bone1/bone1-pic2.webp', 
-        image3:'/images/products/bone1/bone1-pic3.webp', 
-        images4:'/images/products/bone1/bone1-pic4.webp'
-    },
-    {
-        nome:'Boné Preto NY', 
-        preco:'R$ 100,00', 
-        valorParcela:'R$ 25,00',
-        image1:'/images/products/bone2/bone2-frente.webp', 
-        image2:'/images/products/bone2/bone2-pic2.webp', 
-        image3:'/images/products/bone2/bone2-pic3.webp', 
-        images4:'/images/products/bone2/bone2-pic4.webp'
-    },
-    {
-        nome:'Boné Preto Seahawks', 
-        preco:'R$ 100,00', 
-        valorParcela:'R$ 25,00',
-        image1:'/images/products/bone3/bone3-frente.webp', 
-        image2:'/images/products/bone3/bone3-pic2.webp', 
-        image3:'/images/products/bone3/bone3-pic3.webp', 
-        images4:'/images/products/bone3/bone3-pic4.webp'
-    },
-    {
-        nome:'Boné Roxo', 
-        preco:'R$ 100,00', 
-        valorParcela:'R$ 25,00',
-        image1:'/images/products/bone4/bone4-frente.webp', 
-        image2:'/images/products/bone4/bone4-pic2.webp', 
-        image3:'/images/products/bone4/bone4-pic3.webp', 
-        images4:'/images/products/bone4/bone4-pic4.webp'
-    },
-]
+const db = require('../models');
+const { Op } = require("sequelize")
 
 const indexController = {
-    home: (req,res) => {
-        res.render('index', {produtos:listaProdutos})
+    home: async (req,res) => {
+        const produtos = await db.Produto.findAll();
+        res.render('index', {produtos:produtos})
+    },
+
+    search: async (req,res) => {
+        const busca = req.query.search;
+        let resultado = null;
+		
+		if(await db.Produto.findOne({where:{nome: {[Op.like]:`%${busca}%`}}})){
+			resultado = await db.Produto.findAll({where:{nome: {[Op.like]:`%${busca}%`}}})
+		} else if(await db.Produto.findOne({where:{descricao: {[Op.like]:`%${busca}%`}}})) { 
+            resultado = await db.Produto.findAll({where:{descricao: {[Op.like]:`%${busca}%`}}})
+        } else {
+			resultado = " ";
+		}
+
+		res.render('results',{resultado:resultado})
     }
 }
 

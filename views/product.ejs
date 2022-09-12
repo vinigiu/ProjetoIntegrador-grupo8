@@ -17,45 +17,51 @@
     <%- include('partials/header')%>
     
     <main>
-        <section id="product">
-            <article id="images">
-                <div id="main-img">
-                    <img src="/images/products/bone1/bone1-frente.webp" alt="Boné 1">
-                </div>
-                <div id="sec-imgs">
-                    <img src="/images/products/bone1/bone1-pic2.webp" alt="boné 1 segunda imagem">
-                    <img src="/images/products/bone1/bone1-pic3.webp" alt="boné 1 terceira imagem">
-                    <img src="/images/products/bone1/bone1-pic4.webp" alt="boné 1 quarta imagem">
-                </div>
-            </article>
-            <article id="prod-descr">
-                <h1 id="prod-name">Boné Laranja</h1>
-                <div id="descr-txt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta laborum quibusdam earum hic officiis nisi at dolore et quam ipsum quae ea excepturi accusamus dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro, hic est perspiciatis non voluptatum dolor saepe totam quae facere culpa molestiae impedit vero. Doloremque qui sunt cupiditate blanditiis architecto.
-                </div>
-            </article>
-        </section>
-        <section id="pay-info">
-            <article id="price">
-                <h2>R$ 100,00</h2>
-                <p>ou até <strong>4x</strong> de <strong>R$ 25,00</strong> sem juros</p>
-            </article>
-            <article id="frete">
-                <article><h3>Calculadora de frete</h3></article>
-                <form action="" method="post">
-                    <input id="cep" type="numeric" placeholder="Digite seu CEP">
-                    <input id="button" type="button" value="OK">
-                </form>
-            </article>
-            <article id="pay">
-                <div id="buy-button">
-                    <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
-                    <p>Comprar</p>
-                </div>
-            </article>
-        </section>
+            <section id="product">
+                <article id="images">
+                    <div id="main-img">
+                        <img src="/images/products/<%= produto.img1 %>" alt="boné primeira imagem ">
+                    </div>
+                    <div id="sec-imgs">
+                        <img src="/images/products/<%= produto.img2 %>" alt="boné segunda imagem">
+                        <img src="/images/products/<%= produto.img3 %>" alt="boné terceira imagem">
+                        <img src="/images/products/<%= produto.img4 %>" alt="boné quarta imagem">
+                    </div>
+                </article>
+                <article id="prod-descr">
+                    <h1 id="prod-name"><%= produto.nome %></h1>
+                    <div id="descr-txt">
+                        <%= produto.descricao %>
+                    </div>
+                </article>
+            </section>
+            <section id="pay-info">
+                <article id="price">
+                    <h2>R$ <%= produto.preco %></h2>
+                    <p>ou até <strong>4x</strong> de <strong>R$ <%= produto.preco/4 %></strong> sem juros</p>
+                </article>
+                <article id="frete">
+                    <article><h3>Calculadora de frete</h3></article>
+                    <form action="/produto/<%=produto.id%>" method="post">
+                        <input id="cep" type="numeric" name="cep" placeholder="Digite seu CEP">
+                        <input id="button" name="button" type="submit" value="OK">
+                    </form>
+                    <%if(resultado !== 'undefined') {%>
+                        <h3>R$ <%=resultado%></h3>
+                    <%}%>
+                </article>
+                <article id="pay">
+                    <form action="/checkout/carrinho" method="post">
+                        <button type="submit" id="buy-button">
+                            <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
+                            <p>Comprar</p>
+                        </button>
+                    </form>
+                </article>
+            </section>
     </main>
 
     <%- include('partials/footer')%>
+    <script src="/javascripts/productEvents.js"></script>
 </body>
 </html>
