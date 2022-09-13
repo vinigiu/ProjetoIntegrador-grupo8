@@ -1,14 +1,27 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const listaProdutos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../models')
+const correiosController = require('../controllers/correiosController')
+const fs = require('fs')
 
 const productController = {
-    show: (req,res) => {
-        let productID = req.params.id;
-        const produto = listaProdutos.find(element => element.id == productID)
-        res.render('product', {produto:produto})
-    }
+    show: async (req,res,next) => {
+        const produtoID = req.params.id;
+        const produto = await db.Produto.findByPk(produtoID);
+        req.session.produtoID = produtoID
+
+        res.render('product', {produto:produto, resultado:'undefined'})
+    },
+
+    getPreco: async (req,res) => {
+        const produtoID = req.params.id;
+        const produto = await db.Produto.findByPk(produtoID);
+
+        correiosController.calculaPreco(req,res)
+
+        const resultado = await JSON.parse(fs.readFileSync(`${__dirname}\\assetCorreio\\correios.json`))
+        const resultadoTratado = resultado.Servicos.cServico[0].Valor[0]
+
+        res.render('product', {produto:produto, resultado:resultadoTratado})
+    },
 }
 
 module.exports = productController

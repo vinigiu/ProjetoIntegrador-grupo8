@@ -20,12 +20,12 @@
             <section id="product">
                 <article id="images">
                     <div id="main-img">
-                        <img src="/images/products/<%= produto.image1 %>" alt="boné primeira imagem ">
+                        <img src="/images/products/<%= produto.img1 %>" alt="boné primeira imagem ">
                     </div>
                     <div id="sec-imgs">
-                        <img src="/images/products/<%= produto.image2 %>" alt="boné segunda imagem">
-                        <img src="/images/products/<%= produto.image3 %>" alt="boné terceira imagem">
-                        <img src="/images/products/<%= produto.image4 %>" alt="boné quarta imagem">
+                        <img src="/images/products/<%= produto.img2 %>" alt="boné segunda imagem">
+                        <img src="/images/products/<%= produto.img3 %>" alt="boné terceira imagem">
+                        <img src="/images/products/<%= produto.img4 %>" alt="boné quarta imagem">
                     </div>
                 </article>
                 <article id="prod-descr">
@@ -38,24 +38,30 @@
             <section id="pay-info">
                 <article id="price">
                     <h2>R$ <%= produto.preco %></h2>
-                    <p>ou até <strong>4x</strong> de <strong>R$ <%= produto.valorParcela %></strong> sem juros</p>
+                    <p>ou até <strong>4x</strong> de <strong>R$ <%= produto.preco/4 %></strong> sem juros</p>
                 </article>
                 <article id="frete">
                     <article><h3>Calculadora de frete</h3></article>
-                    <form action="" method="post">
-                        <input id="cep" type="numeric" placeholder="Digite seu CEP">
-                        <input id="button" type="button" value="OK">
+                    <form action="/produto/<%=produto.id%>" method="post">
+                        <input id="cep" type="numeric" name="cep" placeholder="Digite seu CEP">
+                        <input id="button" name="button" type="submit" value="OK">
                     </form>
+                    <%if(resultado !== 'undefined') {%>
+                        <h3>R$ <%=resultado%></h3>
+                    <%}%>
                 </article>
                 <article id="pay">
-                    <div id="buy-button">
-                        <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
-                        <p>Comprar</p>
-                    </div>
+                    <form action="/checkout/carrinho" method="post">
+                        <button type="submit" id="buy-button">
+                            <img src="/images/icones/icons8-carrinho-favorito-48.png" alt="Comprar">
+                            <p>Comprar</p>
+                        </button>
+                    </form>
                 </article>
             </section>
     </main>
 
     <%- include('partials/footer')%>
+    <script src="/javascripts/productEvents.js"></script>
 </body>
 </html>

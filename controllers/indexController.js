@@ -1,11 +1,25 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const listaProdutos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../models');
+const { Op } = require("sequelize")
 
 const indexController = {
-    home: (req,res) => {
-        res.render('index', {produtos:listaProdutos})
+    home: async (req,res) => {
+        const produtos = await db.Produto.findAll();
+        res.render('index', {produtos:produtos})
+    },
+
+    search: async (req,res) => {
+        const busca = req.query.search;
+        let resultado = null;
+		
+		if(await db.Produto.findOne({where:{nome: {[Op.like]:`%${busca}%`}}})){
+			resultado = await db.Produto.findAll({where:{nome: {[Op.like]:`%${busca}%`}}})
+		} else if(await db.Produto.findOne({where:{descricao: {[Op.like]:`%${busca}%`}}})) { 
+            resultado = await db.Produto.findAll({where:{descricao: {[Op.like]:`%${busca}%`}}})
+        } else {
+			resultado = " ";
+		}
+
+		res.render('results',{resultado:resultado})
     }
 }
 
