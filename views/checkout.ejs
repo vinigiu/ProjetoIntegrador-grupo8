@@ -28,8 +28,8 @@
                 <div class="row g-5">
                   <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                      <span class="text-primary">Seu Carrinho</span>
-                      <span class="badge bg-primary rounded-pill">3</span>
+                      <span class="text-success">Seu Carrinho</span>
+                      <span class="badge bg-success text-bg-success rounded-pill">3</span>
                     </h4>
                     <ul class="list-group mb-3">
                       <li class="list-group-item d-flex justify-content-between lh-sm">
@@ -69,7 +69,7 @@
                     <form class="card p-2">
                       <div class="input-group">
                         <input type="text" class="form-control" placeholder="Promo code">
-                        <button type="submit" class="btn btn-secondary">Redeem</button>
+                        <button type="submit" class="btn btn-success">Redeem</button>
                       </div>
                     </form>
                   </div>
@@ -106,7 +106,7 @@
             
                         <div class="col-12">
                           <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                          <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                          <input type="email" class="form-control" id="email" placeholder="email@email.com">
                           <div class="invalid-feedback">
                             Insira um endereço de e-mail válido para atualizações de envio.
                           </div>
@@ -114,7 +114,7 @@
             
                         <div class="col-12">
                           <label for="address" class="form-label">Endereço</label>
-                          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                          <input type="text" class="form-control" id="address" placeholder="Av. Fulano de Tal, 123" required>
                           <div class="invalid-feedback">
                             Por favor insira seu endereço de entrega.
                           </div>
@@ -122,11 +122,11 @@
             
                         <div class="col-12">
                           <label for="address2" class="form-label">Endereço 2 <span class="text-muted">(Opcional)</span></label>
-                          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                          <input type="text" class="form-control" id="address2" placeholder="Sicrano, 456 ">
                         </div>
             
                         <div class="col-md-5">
-                          <label for="country" class="form-label">Country</label>
+                          <label for="country" class="form-label">País</label>
                           <select class="form-select" id="country" required>
                             <option value="">Escolha...</option>
                             <option>Brasil</option>
@@ -138,9 +138,33 @@
             
                         <div class="col-md-4">
                           <label for="state" class="form-label">Estado</label>
-                          <select class="form-select" id="state" required>
-                            <option value="">Escolha...</option>
-                            <option>Santos</option>
+                          <select class="form-select" id="state" required>                            
+                            <option>Acre</option>
+                            <option>Alagoas</option>
+                            <option>Amapá</option>
+                            <option>Amazonas</option>
+                            <option>Bahia</option>
+                            <option>Ceara</option>
+                            <option>Distrito Federal</option>
+                            <option>Espírito Santo</option>
+                            <option>Goiás</option>
+                            <option>Maranhão</option>
+                            <option>Mato Grosso</option>
+                            <option>Mato Grosso do Sul</option>
+                            <option>Minas Gerais</option>
+                            <option>Pará</option>
+                            <option>Paraíba</option>
+                            <option>Paraná</option>
+                            <option>Pernambuco</option>
+                            <option>Piauí</option>
+                            <option>Rio Grande do Norte</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Rondônia</option>
+                            <option>Roraima</option>
+                            <option>Santa Catarina</option>
+                            <option>São Paulo</option>
+                            <option>Sergipe</option>
+                            <option>Tocantins</option>
                           </select>
                           <div class="invalid-feedback">
                             Forneça um estado válido.
@@ -174,15 +198,15 @@
             
                       <div class="my-3">
                         <div class="form-check">
-                          <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                          <input id="credit" name="paymentMethod" type="radio" class="form-check-input  bg-success" checked required>
                           <label class="form-check-label" for="credit">Cartão de Crédito</label>
                         </div>
                         <div class="form-check">
-                          <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                          <input id="debit" name="paymentMethod" type="radio" class="form-check-input bg-success" required>
                           <label class="form-check-label" for="debit">Cartão de Débito</label>
                         </div>
                         <div class="form-check">
-                          <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                          <input id="paypal" name="paymentMethod" type="radio" class="form-check-input bg-success" required>
                           <label class="form-check-label" for="paypal">PayPal</label>
                         </div>
                       </div>
@@ -224,7 +248,7 @@
             
                       <hr class="my-4">
             
-                      <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar para finalizar a compra</button>
+                      <button class="w-100 btn btn-success mb-3 btn-lg" type="submit">Continuar para finalizar a compra</button>
                     </form>
                   </div>
                 </div>

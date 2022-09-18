@@ -6,13 +6,13 @@
                     "41106"
                 ],
                 "Valor": [
-                    "0,00"
+                    "22,53"
                 ],
                 "PrazoEntrega": [
-                    "0"
+                    "6"
                 ],
                 "ValorSemAdicionais": [
-                    "0,00"
+                    "21,00"
                 ],
                 "ValorMaoPropria": [
                     "0,00"
@@ -21,22 +21,22 @@
                     "0,00"
                 ],
                 "ValorValorDeclarado": [
-                    "0,00"
+                    "1,53"
                 ],
                 "EntregaDomiciliar": [
-                    ""
+                    "N"
                 ],
                 "EntregaSabado": [
-                    ""
+                    "N"
                 ],
                 "obsFim": [
-                    ""
+                    "O CEP de destino est� temporariamente sem entrega domiciliar. A entrega ser� efetuada na ag�ncia indicada no Aviso de Chegada que ser� entregue no endere�o do destinat�rio."
                 ],
                 "Erro": [
-                    "-3"
+                    "010"
                 ],
                 "MsgErro": [
-                    "CEP de destino invalido."
+                    "O CEP de destino est� temporariamente sem entrega domiciliar. A entrega ser� efetuada na ag�ncia indicada no Aviso de Chegada que ser� entregue no endere�o do destinat�rio."
                 ]
             }
         ]
