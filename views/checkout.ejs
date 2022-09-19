@@ -128,8 +128,11 @@
                         <div class="col-md-5">
                           <label for="country" class="form-label">País</label>
                           <select class="form-select" id="country" required>
-                            <option value="">Escolha...</option>
-                            <option>Brasil</option>
+
+                            <% country.forEach(countrys =>{ %>
+                              <option value=""> <%= countrys.nome %> </option>                        
+                            <% }) %>
+                            
                           </select>
                           <div class="invalid-feedback">
                             Selecione um país válido..
@@ -139,7 +142,10 @@
                         <div class="col-md-4">
                           <label for="state" class="form-label">Estado</label>
                           <select class="form-select" id="state" required>                            
-                            <option>Acre</option>
+                            <% states.forEach(state =>{ %>
+                              <option value=""> <%= state.nome %> </option>                        
+                            <% }) %>
+                            <!-- <option>Acre</option>
                             <option>Alagoas</option>
                             <option>Amapá</option>
                             <option>Amazonas</option>
@@ -164,7 +170,7 @@
                             <option>Santa Catarina</option>
                             <option>São Paulo</option>
                             <option>Sergipe</option>
-                            <option>Tocantins</option>
+                            <option>Tocantins</option> -->
                           </select>
                           <div class="invalid-feedback">
                             Forneça um estado válido.
@@ -173,7 +179,7 @@
             
                         <div class="col-md-3">
                           <label for="zip" class="form-label">Cep</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <input name="cep" type="text" class="form-control" id="zip" placeholder="" required>
                           <div class="invalid-feedback">
                             CEP obrigatório.
                           </div>

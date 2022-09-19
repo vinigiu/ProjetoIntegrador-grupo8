@@ -2,7 +2,7 @@ const db = require('../models')
 
 const checkoutController = {
     checkout: (req,res) => {
-        res.render('checkout')
+        res.render('checkout', {states:req.session.states, country:req.session.country})
     },
 
     carrinho: (req,res) => {
