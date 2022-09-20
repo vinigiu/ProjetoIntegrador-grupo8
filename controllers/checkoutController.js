@@ -2,7 +2,7 @@ const db = require('../models')
 
 const checkoutController = {
     checkout: (req,res) => {
-        res.render('checkout')
+        res.render('checkout', {states:req.session.states, country:req.session.country})
     },
 
     carrinho: (req,res) => {
@@ -26,7 +26,11 @@ const checkoutController = {
         console.log(req.session.produto)
 
         res.render('carrinho', {produto:req.session.produto})
-    }
+    },
+
+    // mostrarEstados: async (req,res) => {
+    //     let estadosListados = req.params.estados
+    //     console.log(estadosListados)
 }
 
 module.exports = checkoutController
