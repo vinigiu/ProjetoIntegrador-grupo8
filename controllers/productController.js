@@ -15,10 +15,11 @@ const productController = {
         const produtoID = req.params.id;
         const produto = await db.Produto.findByPk(produtoID);
 
-        correiosController.calculaPreco(req,res)
+        const resultado = await  correiosController.calculaPreco(req,res)
 
-        const resultado = await JSON.parse(fs.readFileSync(`${__dirname}\\assetCorreio\\correios.json`))
-        const resultadoTratado = resultado.Servicos.cServico[0].Valor[0]
+        //const resultado = await JSON.parse(fs.readFileSync(`${__dirname}\\assetCorreio\\correios.json`))
+        console.log(resultado)
+        const resultadoTratado = JSON.parse(resultado).Servicos.cServico[0].Valor[0]
 
         res.render('product', {produto:produto, resultado:resultadoTratado})
     },

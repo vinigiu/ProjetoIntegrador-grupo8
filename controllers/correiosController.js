@@ -20,13 +20,18 @@ const correiosController = {
         let resul = await correios.get(`nCdEmpresa=&sDsSenha=&sCepOrigem=${cepOrigem}&sCepDestino=${cepDestino}&nVlPeso=${peso}&nCdFormato=${formato}&nVlComprimento=${comprimento}&nVlAltura=${altura}&nVlLargura=${largura}&sCdMaoPropria=${maoPropria}&nVlValorDeclarado=${valorDeclarado}&sCdAvisoRecebimento=${avisoRecebimento}&nCdServico=${servico}&nVlDiametro=${diametro}&StrRetorno=xml&nIndicaCalculo=3`)
 
         if(await resul.data !== 'undefined') {
-            xml2js.parseString(resul.data, (err,result) => {
-                if(err) {
-                    throw err;
-                }
-                const json = JSON.stringify(result, null, 4);
-                fs.writeFileSync(`${__dirname}\\assetCorreio\\correios.json`, json)
+            const myPromise = new Promise((resolve,reject) =>{
+
+                xml2js.parseString(resul.data, (err,result) => {
+                    if(err) {
+                        throw err;
+                    }
+                    const json = JSON.stringify(result, null, 4);
+                    resolve(json)
+                   //fs.writeFileSync(`${__dirname}\\assetCorreio\\correios.json`, json)
+                })
             })
+            return await myPromise
         }
         return res.send("Erro")
     }

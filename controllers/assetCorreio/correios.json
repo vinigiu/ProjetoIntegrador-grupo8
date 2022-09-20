@@ -9,7 +9,7 @@
                     "22,53"
                 ],
                 "PrazoEntrega": [
-                    "6"
+                    "5"
                 ],
                 "ValorSemAdicionais": [
                     "21,00"
@@ -24,19 +24,19 @@
                     "1,53"
                 ],
                 "EntregaDomiciliar": [
-                    "N"
+                    "S"
                 ],
                 "EntregaSabado": [
                     "N"
                 ],
                 "obsFim": [
-                    "O CEP de destino est� temporariamente sem entrega domiciliar. A entrega ser� efetuada na ag�ncia indicada no Aviso de Chegada que ser� entregue no endere�o do destinat�rio."
+                    ""
                 ],
                 "Erro": [
-                    "010"
+                    "0"
                 ],
                 "MsgErro": [
-                    "O CEP de destino est� temporariamente sem entrega domiciliar. A entrega ser� efetuada na ag�ncia indicada no Aviso de Chegada que ser� entregue no endere�o do destinat�rio."
+                    ""
                 ]
             }
         ]
