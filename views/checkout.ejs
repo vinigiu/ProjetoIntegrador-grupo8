@@ -112,17 +112,33 @@
                           </div>
                         </div>
             
+                        <div class="col-md-3">
+                          <label for="cep" class="form-label">Cep</label>
+                          <input name="cep" type="text" class="form-control" id="cep" placeholder="" required>
+                          <div class="invalid-feedback">
+                            CEP obrigatório.
+                          </div>
+                        </div>
                         <div class="col-12">
                           <label for="address" class="form-label">Endereço</label>
-                          <input type="text" class="form-control" id="address" placeholder="Av. Fulano de Tal, 123" required>
+                          <input type="text" class="form-control" id="address" placeholder="Av. Fulano de Tal" required>
                           <div class="invalid-feedback">
                             Por favor insira seu endereço de entrega.
                           </div>
                         </div>
             
                         <div class="col-12">
+                          <label for="numberEnd" class="form-label">Número</label>
+                          <input name="numberEnd" type="number" class="form-control" id="numberEnd" placeholder="N°">
+                        </div>
+                        <div class="col-12">
+                          <label for="bairro" class="form-label">Bairro</label>
+                          <input name="bairro" type="text" class="form-control" id="bairro" placeholder="Bairro">
+                        </div>
+
+                        <div class="col-12">
                           <label for="address2" class="form-label">Endereço 2 <span class="text-muted">(Opcional)</span></label>
-                          <input type="text" class="form-control" id="address2" placeholder="Sicrano, 456 ">
+                          <input type="text" class="form-control" id="address2" placeholder="Sicrano ">
                         </div>
             
                         <div class="col-md-5">
@@ -130,7 +146,7 @@
                           <select class="form-select" id="country" required>
 
                             <% country.forEach(countrys =>{ %>
-                              <option value=""> <%= countrys.nome %> </option>                        
+                              <option  value=""> <%= countrys.nome %> </option>                        
                             <% }) %>
                             
                           </select>
@@ -141,49 +157,14 @@
             
                         <div class="col-md-4">
                           <label for="state" class="form-label">Estado</label>
-                          <select class="form-select" id="state" required>                            
-                            <% states.forEach(state =>{ %>
-                              <option value=""> <%= state.nome %> </option>                        
-                            <% }) %>
-                            <!-- <option>Acre</option>
-                            <option>Alagoas</option>
-                            <option>Amapá</option>
-                            <option>Amazonas</option>
-                            <option>Bahia</option>
-                            <option>Ceara</option>
-                            <option>Distrito Federal</option>
-                            <option>Espírito Santo</option>
-                            <option>Goiás</option>
-                            <option>Maranhão</option>
-                            <option>Mato Grosso</option>
-                            <option>Mato Grosso do Sul</option>
-                            <option>Minas Gerais</option>
-                            <option>Pará</option>
-                            <option>Paraíba</option>
-                            <option>Paraná</option>
-                            <option>Pernambuco</option>
-                            <option>Piauí</option>
-                            <option>Rio Grande do Norte</option>
-                            <option>Rio Grande do Sul</option>
-                            <option>Rondônia</option>
-                            <option>Roraima</option>
-                            <option>Santa Catarina</option>
-                            <option>São Paulo</option>
-                            <option>Sergipe</option>
-                            <option>Tocantins</option> -->
-                          </select>
+                          <input class="form-control" type="text" id="state" required>                            
+                            
+                          </input>
                           <div class="invalid-feedback">
                             Forneça um estado válido.
                           </div>
                         </div>
             
-                        <div class="col-md-3">
-                          <label for="zip" class="form-label">Cep</label>
-                          <input name="cep" type="text" class="form-control" id="zip" placeholder="" required>
-                          <div class="invalid-feedback">
-                            CEP obrigatório.
-                          </div>
-                        </div>
                       </div>
             
                       <hr class="my-4">
@@ -262,4 +243,5 @@
         </div>
         <%- include('partials/footer')%>
     </body>
+    <script src="/javascripts/endComplete.js"></script>
 </html>
