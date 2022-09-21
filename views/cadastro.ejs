@@ -76,6 +76,13 @@
               />
               <input
                 type="text"
+                id="cep"
+                name="cep"
+                placeholder="CEP*"
+                value="<%=old.cep%>"
+              />
+              <input
+                type="text"
                 id="endereco"
                 name="endereco"
                 placeholder="Endereço*"
@@ -88,13 +95,7 @@
                 placeholder="Número*"
                 value="<%=old.complemento%>"
               />
-              <input
-                type="number"
-                id="cep"
-                name="cep"
-                placeholder="CEP*"
-                value="<%=old.cep%>"
-              />
+
               <input
                 type="text"
                 id="cidade"
@@ -102,9 +103,16 @@
                 placeholder="Cidade*"
                 value="<%=old.cidade%>"
               />
-              <select name="estado" id="estado" value="<%=old.estado%>">
-                <option selected disabled>Selecione seu estado:</option>
-                <option value="AC">AC</option>
+                 <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Cidade*"
+                value="<%=old.cidade%>"
+              />
+              <input type="text" name="estado" id="estado" placeholder="Selecione seu estado" value="<%=old.estado%>">
+                <!-- <option selected disabled>Selecione seu estado:</option> -->
+                <!-- <option value="AC">AC</option>
                 <option value="AL">AL</option>
                 <option value="AP">AP</option>
                 <option value="AM">AM</option>
@@ -130,8 +138,8 @@
                 <option value="SP">SP</option>
                 <option value="SE">SE</option>
                 <option value="TO">TO</option>
-                <option value="DF">DF</option>
-              </select>
+                <option value="DF">DF</option> -->
+              </input>
               <select name="genero" id="genero" value="<%=old.genero%>">
                 <option selected disabled>Selecione seu gênero:</option>
                 <option value="Feminino">Feminino</option>
@@ -194,6 +202,7 @@
                 name="tel"
                 placeholder="Telefone Celular*"
               />
+              <input type="text" id="cep" name="cep" placeholder="CEP*" />
               <input
                 type="text"
                 id="endereco"
@@ -206,16 +215,17 @@
                 name="complemento"
                 placeholder="Número*"
               />
-              <input type="number" id="cep" name="cep" placeholder="CEP*" />
+
               <input
                 type="text"
                 id="cidade"
                 name="cidade"
                 placeholder="Cidade*"
               />
-              <select name="estado" id="estado">
-                <option selected disabled>Selecione seu estado:</option>
-                <option value="AC">AC</option>
+              <input type="text" name="estado" id="estado" placeholder="Selecione seu estado">
+                
+                <!-- <option selected disabled>Selecione seu estado:</option> -->
+                <!-- <option value="AC">AC</option>
                 <option value="AL">AL</option>
                 <option value="AP">AP</option>
                 <option value="AM">AM</option>
@@ -241,8 +251,8 @@
                 <option value="SP">SP</option>
                 <option value="SE">SE</option>
                 <option value="TO">TO</option>
-                <option value="DF">DF</option>
-              </select>
+                <option value="DF">DF</option> -->
+              </input>
               <select name="genero" id="genero">
                 <option selected disabled>Selecione seu gênero:</option>
                 <option value="Feminino">Feminino</option>
@@ -278,5 +288,6 @@
     </main>
     <!-- FOOTER -->
     <%- include('partials/footer')%>
-  </body>
+</body>
+<script src="/javascripts/endCompleteCadastro.js"></script>
 </html>
