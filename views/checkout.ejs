@@ -10,238 +10,137 @@
         <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">        
-        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="form-validation.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     </head>
-    <body class="bg-light">
+    <body>
        
         <%- include('partials/header')%>
 
-        <div class="container">
-            <main>
-                <div class="py-5 text-center">                  
-                  <h2>Finalizar Compra</h2>
-                </div>
-            
-                <div class="row g-5">
-                  <div class="col-md-5 col-lg-4 order-md-last">
-                    <h4 class="d-flex justify-content-between align-items-center mb-3">
-                      <span class="text-success">Seu Carrinho</span>
-                      <span class="badge bg-success text-bg-success rounded-pill">3</span>
-                    </h4>
-                    <ul class="list-group mb-3">
-                      <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                          <h6 class="my-0">Nome Produto</h6>
-                          <small class="text-muted">Descrição</small>
-                        </div>
-                        <span class="text-muted">R$12</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                          <h6 class="my-0">Segundo Produto</h6>
-                          <small class="text-muted">Descrição</small>
-                        </div>
-                        <span class="text-muted">R$8</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                          <h6 class="my-0">Terceiro Produto</h6>
-                          <small class="text-muted">Descrição</small>
-                        </div>
-                        <span class="text-muted">R$5</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                          <h6 class="my-0">Código Promocional</h6>
-                          <small>1010</small>
-                        </div>
-                        <span class="text-success">−R$5</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (R$)</span>
-                        <strong>R$20</strong>
-                      </li>
-                    </ul>
-            
-                    <form class="card p-2">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Promo code">
-                        <button type="submit" class="btn btn-success">Redeem</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col-md-7 col-lg-8">
-                    <h4 class="mb-3">Endereço de Entrega</h4>
-                    <form class="needs-validation" novalidate>
-                      <div class="row g-3">
-                        <div class="col-sm-6">
-                          <label for="firstName" class="form-label">Primeiro Nome</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                          <div class="invalid-feedback">
-                            Validar Primeiro Nome é obrigatório.
-                          </div>
-                        </div>
-            
-                        <div class="col-sm-6">
-                          <label for="lastName" class="form-label">Sobrenome</label>
-                          <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                          <div class="invalid-feedback">
-                            Validar Sobrenome é obrigatório.
-                          </div>
-                        </div>
-            
-                        <div class="col-12">
-                          <label for="username" class="form-label">Usuário</label>
-                          <div class="input-group has-validation">
-                            <span class="input-group-text">@</span>
-                            <input type="text" class="form-control" id="username" placeholder="Usuário" required>
-                          <div class="invalid-feedback">
-                            Validar Usuário é obrigatório.
+        <main>
+            <div class="hamburguer-menu">
+                <img src="/images
+    /hambuguer-menu.png" alt="" srcset="">
+                <h1 class="checkout">Finalizar Compra</h1>
+            </div>
+            <div class="section-main">
+                <section class="section-form">
+                    <section>
+                        <aside>
+                            <ol>
+                                <li>
+                                    <h2>Seu Cadastro</h2>
+                                    <p>Arthur Philip Prange</p>
+                                    <p>arthur.prange@gmail.com</p>
+                                    <p>425.354.569-88</p>
+                                </li>
+                                <li>
+                                    <h2>Endereço de Entrega</h2>
+                                    <p>Arthur Philip Prange</p>
+                                    <p>Rua monte alegre,182,154</p>
+                                    <p>Perdizes - São Paulo/SP</p>
+                                    <p>CEP 05014-000</p>
+                                </li>
+                            </ol>
+                        </aside>
+                    </section>
+                    <section class="forma-pagamento">
+                        <h2>1. Forma de Pagamento</h2>
+                        <h3>Escolha entre Cartão de Crédito, Boleto Bancário ou PIX</h3>
+                        <form action="">
+                            <div class="inputs-pagamentos">
+                                <input
+                                    type="radio"
+                                    id="html"
+                                    name="credito"
+                                    value="HTML"
+                                >
+                                <label for="html">Crédito</label>
+                                <br>
+                                <input
+                                    type="radio"
+                                    id="css"
+                                    name="boleto"
+                                    value="CSS"
+                                >
+                                <label for="css">Boleto Bancário</label>
+                                <br>
+                                <input
+                                    type="radio"
+                                    id="javascript"
+                                    name="pix"
+                                    value="JavaScript"
+                                >
+                                <label for="javascript">Pix</label>
                             </div>
-                          </div>
-                        </div>
-            
-                        <div class="col-12">
-                          <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                          <input type="email" class="form-control" id="email" placeholder="email@email.com">
-                          <div class="invalid-feedback">
-                            Insira um endereço de e-mail válido para atualizações de envio.
-                          </div>
-                        </div>
-            
-                        <div class="col-md-3">
-                          <label for="cep" class="form-label">Cep</label>
-                          <input name="cep" type="text" class="form-control" id="cep" placeholder="" required>
-                          <div class="invalid-feedback">
-                            CEP obrigatório.
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <label for="address" class="form-label">Endereço</label>
-                          <input type="text" class="form-control" id="address" placeholder="Av. Fulano de Tal" required>
-                          <div class="invalid-feedback">
-                            Por favor insira seu endereço de entrega.
-                          </div>
-                        </div>
-            
-                        <div class="col-12">
-                          <label for="numberEnd" class="form-label">Número</label>
-                          <input name="numberEnd" type="number" class="form-control" id="numberEnd" placeholder="N°">
-                        </div>
-                        <div class="col-12">
-                          <label for="bairro" class="form-label">Bairro</label>
-                          <input name="bairro" type="text" class="form-control" id="bairro" placeholder="Bairro">
-                        </div>
-
-                        <div class="col-12">
-                          <label for="address2" class="form-label">Endereço 2 <span class="text-muted">(Opcional)</span></label>
-                          <input type="text" class="form-control" id="address2" placeholder="Sicrano ">
-                        </div>
-            
-                        <div class="col-md-5">
-                          <label for="country" class="form-label">País</label>
-                          <select class="form-select" id="country" required>
-
-                            <% country.forEach(countrys =>{ %>
-                              <option  value=""> <%= countrys.nome %> </option>                        
-                            <% }) %>
-                            
-                          </select>
-                          <div class="invalid-feedback">
-                            Selecione um país válido..
-                          </div>
-                        </div>
-            
-                        <div class="col-md-4">
-                          <label for="state" class="form-label">Estado</label>
-                          <input class="form-control" type="text" id="state" required>                            
-                            
-                          </input>
-                          <div class="invalid-feedback">
-                            Forneça um estado válido.
-                          </div>
-                        </div>
-            
-                      </div>
-            
-                      <hr class="my-4">
-            
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="same-address">
-                        <label class="form-check-label" for="same-address">O endereço de entrega é o mesmo que meu endereço de cobrança</label>
-                      </div>
-            
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="save-info">
-                        <label class="form-check-label" for="save-info">Salve esta informação para a próxima vez</label>
-                      </div>
-            
-                      <hr class="my-4">
-            
-                      <h4 class="mb-3">Pagamento</h4>
-            
-                      <div class="my-3">
-                        <div class="form-check">
-                          <input id="credit" name="paymentMethod" type="radio" class="form-check-input  bg-success" checked required>
-                          <label class="form-check-label" for="credit">Cartão de Crédito</label>
-                        </div>
-                        <div class="form-check">
-                          <input id="debit" name="paymentMethod" type="radio" class="form-check-input bg-success" required>
-                          <label class="form-check-label" for="debit">Cartão de Débito</label>
-                        </div>
-                        <div class="form-check">
-                          <input id="paypal" name="paymentMethod" type="radio" class="form-check-input bg-success" required>
-                          <label class="form-check-label" for="paypal">PayPal</label>
-                        </div>
-                      </div>
-            
-                      <div class="row gy-3">
-                        <div class="col-md-6">
-                          <label for="cc-name" class="form-label">Nome do cartão</label>
-                          <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                          <small class="text-muted">Nome completo conforme exibido no cartão</small>
-                          <div class="invalid-feedback">
-                            O nome no cartão é obrigatório
-                          </div>
-                        </div>
-            
-                        <div class="col-md-6">
-                          <label for="cc-number" class="form-label">Número do Cartão de Crédito</label>
-                          <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                          <div class="invalid-feedback">
-                            O número do cartão de crédito é obrigatório
-                          </div>
-                        </div>
-            
-                        <div class="col-md-3">
-                          <label for="cc-expiration" class="form-label">Expira</label>
-                          <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                          <div class="invalid-feedback">
-                            Data de expiração obrigatória
-                          </div>
-                        </div>
-            
-                        <div class="col-md-3">
-                          <label for="cc-cvv" class="form-label">CVV</label>
-                          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                          <div class="invalid-feedback">
-                            Código de segurança obrigatório
-                          </div>
-                        </div>
-                      </div>
-            
-                      <hr class="my-4">
-            
-                      <button class="w-100 btn btn-success mb-3 btn-lg" type="submit">Continuar para finalizar a compra</button>
-                    </form>
-                  </div>
-                </div>
-              </main>
-        </div>
+                            <h3>Escolha a bandeira do seu cartão</h3>
+                            <div class="inputs-bandeiras">
+                                <input
+                                    type="radio"
+                                    id="visa"
+                                    name="age"
+                                    value="30"
+                                >
+                                <label for="age1">Visa</label>
+                                <br>
+                                <input
+                                    type="radio"
+                                    id="master"
+                                    name="age"
+                                    value="60"
+                                >
+                                <label for="age2">Master</label>
+                                <br>
+                                <input
+                                    type="radio"
+                                    id="elo"
+                                    name="age"
+                                    value="100"
+                                >
+                                <label for="age3">Elo</label>
+                                <input
+                                    type="radio"
+                                    id="dinners"
+                                    name="age"
+                                    value="100"
+                                >
+                                <label for="age3">Dinners</label>
+                                <input
+                                    type="radio"
+                                    id="american"
+                                    name="age"
+                                    value="100"
+                                >
+                                <label for="age3">American</label>
+                            </div>
+                            <div class="buttons">
+                                <button class="buttons-produtos">Escolher + produtos</button>
+                                <button class="buttons-produtos">Cancelar Compra</button>
+                                <button class="buttons-produtos">Finalizar Compra</button>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+                <section class="carrinho">
+                    <a href="http://">voltar ao carrinho</a>
+                    <h2 class="carrinho-title">Meu Carrinho</h2>
+                    <h2 class="carrinho-confira">Confira os itens do seu pedido</h2>
+                    <h3>aslkjjaçs asdj çaska çllskdk aççsk</h3>
+                    <div class="infos-quantidade">
+                        <p>Quantidade: 1</p>
+                        <p>R$ 9.999,99</p>
+                    </div>
+                    <div class="totais">
+                        <h2>Total a Vista</h2>
+                        <p>R$ 9.999,99</p>
+                    </div>
+                    <div class="totais">
+                        <h2>Total a Prazo</h2>
+                        <p>R$ 9.999,99</p>
+                    </div>
+                    <a href="http://">Alterar meus produtos</a>
+                </section>
+            </div>
+        </main>
         <%- include('partials/footer')%>
     </body>
-    <script src="/javascripts/endComplete.js"></script>
 </html>
