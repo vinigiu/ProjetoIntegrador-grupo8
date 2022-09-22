@@ -22,7 +22,7 @@ const productController = {
         const resultadoTratado = JSON.parse(resultado).Servicos.cServico[0].Valor[0]
 
         res.render('product', {produto:produto, resultado:resultadoTratado})
-    },
+    }
 }
 
-module.exports = productController
+module.exports = productController;

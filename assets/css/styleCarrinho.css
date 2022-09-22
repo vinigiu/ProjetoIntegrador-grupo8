@@ -95,6 +95,11 @@ main {
     font-weight: bold;
 }
 
+.botao a {
+    text-decoration: none;
+    color:inherit;
+}
+
 .botao:hover {
     background-color: #005C53;
     color: white;

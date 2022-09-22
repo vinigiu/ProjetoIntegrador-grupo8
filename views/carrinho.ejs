@@ -32,7 +32,7 @@
                                 <p><%=item.nome%></p>
                             </div>
         
-                            <div class="qtItem">
+                            <!-- <div class="qtItem">
                                 <p><b>Quantidade:</b></p>
                                 <form action="POST">
                                     <select name="qtItem" id="qtItem">
@@ -41,7 +41,7 @@
                                         <option value="3">3</option>
                                     </select>
                                 </form>
-                            </div>
+                            </div> -->
         
                         </div>
                     </div>
@@ -49,11 +49,10 @@
                     <div class="price">
                         <div class="priceUnit">
                             <p><b>Valor Unitário:</b></p>
-                            <p>R$ <%=item.preco%></p>
+                            <p>R$ <%=item.preco.toFixed(2)%></p>
                         </div>
                         <div class="totalUnit">
-                            <p><b>Total:</b></p>
-                            <p>R$ <%=item.preco * 1%></p>
+                        
                         </div>
                     </div>
                 </div>
@@ -70,7 +69,7 @@
                                 <p><%=produto.nome%></p>
                             </div>
         
-                            <div class="qtItem">
+                            <!-- <div class="qtItem">
                                 <p><b>Quantidade:</b></p>
                                 <form action="POST">
                                     <select name="qtItem" id="qtItem">
@@ -80,7 +79,7 @@
                                         <option value="3">3</option>
                                     </select>
                                 </form>
-                            </div>
+                            </div> -->
         
                         </div>
                     </div>
@@ -88,11 +87,10 @@
                     <div class="price">
                         <div class="priceUnit">
                             <p><b>Valor Unitário:</b></p>
-                            <p><%=produto.preco%></p>
+                            <p>R$ <%=item.preco.toFixed(2)%></p>
                         </div>
                         <div class="totalUnit">
-                            <p><b>Total:</b></p>
-                            <p><%=produto.preco * 1%></p>
+                        
                         </div>
                     </div>
                 </div>
@@ -100,19 +98,20 @@
         <%}%>
         <div class="dadosCompra">
             <div class="botoes">
-                <div class="botao">Adicionar mais itens</div>
-                <div class="botao">Finalizar compra</div>
+                <div class="botao"><a href="/">Adicionar mais itens</a></div>
+                <div class="botao"><a href="/checkout">Finalizar compra</a></div>
             </div>
             <div class="resumoCompra">
                 <div>
                     <p><strong>Total da compra:</strong></p>
-                    <p><strong>Frete: </strong><button>Calcular</button></p>
-                    <p><strong>Total a pagar:</strong></p>
+                    <!-- <p><strong>Frete: </strong><button>Calcular</button></p>
+                    <p><strong>Total a pagar:</strong></p> -->
                 </div>
                 <div class="prices">
-                    <p>R$ 35,00</p>
-                    <p>R$ 5,00</p>
-                    <p>R$ 40,00</p>
+                    
+                    <p><%=totalCompra.toFixed(2)%></p>
+                    <!-- <p>R$ 5,00</p>
+                    <p>R$ 40,00</p> -->
                 </div>
             </div>
         </div>

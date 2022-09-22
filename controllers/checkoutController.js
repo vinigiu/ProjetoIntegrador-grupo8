@@ -1,4 +1,5 @@
 const db = require('../models')
+// const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const checkoutController = {
     checkout: (req,res) => {
@@ -6,7 +7,13 @@ const checkoutController = {
     },
 
     carrinho: (req,res) => {
-        res.render('carrinho', {produto:'undefined'})
+        let totalCompra = 0;
+       
+        for(let item of req.session.produto) {
+            totalCompra += item.preco;
+        }
+        console.log(totalCompra);
+        res.render('carrinho', {produto: req.session.produto, totalCompra: totalCompra})
     },
 
     addToCart: async(req,res) => {
@@ -23,9 +30,15 @@ const checkoutController = {
         } else {
             req.session.produto.push(produto)
         }
-        console.log(req.session.produto)
+        // console.log(req.session.produto)
+        let totalCompra = 0;
+       
+        for(let item of req.session.produto) {
+            totalCompra += item.preco;
+        }
+        console.log(totalCompra);
 
-        res.render('carrinho', {produto:req.session.produto})
+        res.render('carrinho', {produto:req.session.produto, totalCompra: totalCompra})
     },
 
     // mostrarEstados: async (req,res) => {
