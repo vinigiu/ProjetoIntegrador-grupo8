@@ -10,7 +10,7 @@ E-comerce fictício de bonés com as seguintes funcionalidades:
   - Cadastro de novos produtos
   - Cálculo de frete via API dos correios
   - Rotas privadas acessadas somente após login
-  - (Em breve) Carrinho dinâmico
+  - Carrinho dinâmico
   - (Em breve) Geração de pedidos
   - (Em breve) Simualação de pagamento
  
