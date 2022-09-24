@@ -30,15 +30,15 @@ const checkoutController = {
         } else {
             req.session.produto.push(produto)
         }
-        // console.log(req.session.produto)
+
         let totalCompra = 0;
-       
+        
         for(let item of req.session.produto) {
             totalCompra += item.preco;
         }
-        console.log(totalCompra);
+        req.session.totalCompra = totalCompra
 
-        res.render('carrinho', {produto:req.session.produto, totalCompra: totalCompra})
+        res.render('carrinho', {produto:req.session.produto, totalCompra: req.session.totalCompra})
     },
 
     // mostrarEstados: async (req,res) => {
