@@ -29,49 +29,40 @@
                     <div class="col-md-5 col-lg-4 order-md-last">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                             <span class="text-success">Seu Carrinho</span>
-                            <span class="badge bg-success text-bg-success rounded-pill">3</span>
+                            <span class="badge bg-success text-bg-success rounded-pill"><%=produto.length%></span>
                         </h4>
                         <ul class="list-group mb-3">
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Nome Produto</h6>
-                                    <small class="text-muted">Descrição</small>
-                                </div>
-                                <span class="text-muted">R$12</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Segundo Produto</h6>
-                                    <small class="text-muted">Descrição</small>
-                                </div>
-                                <span class="text-muted">R$8</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Terceiro Produto</h6>
-                                    <small class="text-muted">Descrição</small>
-                                </div>
-                                <span class="text-muted">R$5</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between bg-light">
+                            <%if(produto == 'undefined') {%>
+                                <div>Sem produtos</div>
+                            <%} else {%>
+                                <%if(Array.isArray(produto)) {for (let item of produto){%>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h6 class="my-0"><%=item.nome%></h6>
+                                        <small class="text-muted"><%=item.descricao%></small>
+                                    </div>
+                                    <span class="text-muted">R$<%=item.preco%></span>
+                                </li>
+                            <%}}}%>
+                            <!-- <li class="list-group-item d-flex justify-content-between bg-light">
                                 <div class="text-success">
                                     <h6 class="my-0">Código Promocional</h6>
                                     <small>1010</small>
                                 </div>
                                 <span class="text-success">−R$5</span>
-                            </li>
+                            </li> -->
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Total (R$)</span>
-                                <strong>R$20</strong>
+                                <strong>R$ <%=totalCompra%></strong>
                             </li>
                         </ul>
 
-                        <form class="card p-2">
+                        <!-- <form class="card p-2">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Promo code">
                                 <button type="submit" class="btn btn-success">Redeem</button>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                     <div class="col-md-7 col-lg-8">
                         <h4 class="mb-3">Endereço de Entrega</h4>

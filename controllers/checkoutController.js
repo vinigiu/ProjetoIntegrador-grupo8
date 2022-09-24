@@ -3,12 +3,12 @@ const db = require('../models')
 
 const checkoutController = {
     checkout: (req,res) => {
-        res.render('checkout', {states:req.session.states, country:req.session.country})
+        res.render('checkout', {states:req.session.states, country:req.session.country, totalCompra: req.session.totalCompra, produto: req.session.produto})
     },
 
     carrinho: (req,res) => {
         let totalCompra = 0;
-       
+        
         for(let item of req.session.produto) {
             totalCompra += item.preco;
         }
