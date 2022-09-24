@@ -84,6 +84,17 @@ main {
     background-color: #EEEEEE;
 }
 
+#notLogged {
+    height: 83vh;
+    display: flex;
+    justify-content: center;
+}
+
+#notLogged h1 {
+    font-family: "Bebas Neue" ;
+    font-size: 3rem;
+}
+
 #banner img {
     width: 100%;
     max-height: 32vh;
