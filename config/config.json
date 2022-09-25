@@ -1,21 +1,33 @@
 {
   "development": {
     "username": "root",
+<<<<<<< Updated upstream
     "password": "Ov1l3ir@",
+=======
+    "password": "Daniel2609",
+>>>>>>> Stashed changes
     "database": "ze_bone",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+<<<<<<< Updated upstream
     "password": "Ov1l3ir@",
+=======
+    "password": "Daniel2609",
+>>>>>>> Stashed changes
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
+<<<<<<< Updated upstream
     "password": "Ov1l3ir@",
+=======
+    "password": "Daniel2609",
+>>>>>>> Stashed changes
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
