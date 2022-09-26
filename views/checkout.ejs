@@ -195,15 +195,15 @@
 
                             <div class="my-3">
                                 <div class="form-check">
-                                    <input id="credit" name="paymentCredit" type="radio" class="form-check-input  bg-success" checked required>
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input  bg-success" value="credit" checked  required>
                                     <label class="form-check-label" for="credit">Cartão de Crédito</label>
                                 </div>
                                 <div class="form-check">
-                                    <input id="debit" name="paymentDebit" type="radio" class="form-check-input bg-success" required>
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input bg-success" value="debit" required>
                                     <label class="form-check-label" for="debit">Cartão de Débito</label>
                                 </div>
                                 <div class="form-check">
-                                    <input id="paypal" name="paymentPaypal" type="radio" class="form-check-input bg-success" required>
+                                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input bg-success" value="paypal" required>
                                     <label class="form-check-label" for="paypal">PayPal</label>
                                 </div>
                             </div>
@@ -216,6 +216,15 @@
                                     <div class="invalid-feedback">
                                         O nome no cartão é obrigatório
                                     </div>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input id="mastercard" name="cardType" type="radio" class="form-check-input  bg-success" value="mastercard" checked  required>
+                                    <label class="form-check-label" for="credit">Mastercard</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="visa" name="cardType" type="radio" class="form-check-input bg-success" value="visa" required>
+                                    <label class="form-check-label" for="debit">Visa</label>
                                 </div>
 
                                 <div class="col-md-6">
