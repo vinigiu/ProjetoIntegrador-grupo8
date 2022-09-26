@@ -22,7 +22,6 @@ const productVerify = {
     ],
 
     result: (req,res,next) =>{
-        console.log(req)
         const errors = validationResult(req)
         if(!errors.isEmpty()) {
             return res.render('criar-produto',{errors:errors.errors, old:req.body})
