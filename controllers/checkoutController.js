@@ -41,9 +41,9 @@ const checkoutController = {
         res.render('carrinho', {produto:req.session.produto, totalCompra: req.session.totalCompra})
     },
 
-    // mostrarEstados: async (req,res) => {
-    //     let estadosListados = req.params.estados
-    //     console.log(estadosListados)
+    finalizar: (req,res) => {
+        res.render("compraEfetuada")
+    }
 }
 
 module.exports = checkoutController

@@ -9,6 +9,7 @@ main {
   width: 1024px;
   margin: auto;
   margin-top: 30px;
+  min-height: 83vh;
 }
 #notLogged {
   height: 83vh;
