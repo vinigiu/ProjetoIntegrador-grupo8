@@ -8,6 +8,7 @@ const session = require('express-session')
 
 const SECRET = require('./config/secret')
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require ('./routes/product')
@@ -15,6 +16,10 @@ var checkoutRouter = require ('./routes/checkout')
 var manipularRouter = require ('./routes/manipularListaProdutos')
 
 var app = express();
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

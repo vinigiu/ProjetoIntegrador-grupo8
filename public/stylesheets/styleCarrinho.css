@@ -64,8 +64,8 @@ main {
 .dadosCompra {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    /* background-color: aqua; */
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .botoes {
@@ -107,4 +107,9 @@ main {
 
 .prices {
     text-align: right;
+}
+
+.removerItem img {
+    height: 40px;
+
 }

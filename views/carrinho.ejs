@@ -16,12 +16,13 @@
     <%- include('partials/header')%>
 
     <main>
-        <%if(produto == 'undefined') {%>
-            <div>Sem produtos</div>
+        <%if((produto == 'undefined') || (produto.length == 0)) {%>
+            <div>O carrinho está vazio!</div>
         <%} else {%>
             <%if(Array.isArray(produto)) {for(let item of produto){%>
                 <div class="containerItem">
                     <div class="item">
+                        <div><%= item.idCart %></div>
                         <div class="imgItem">
                             <img src="/images/products/<%=item.img1%>" alt="produto">
                         </div>
@@ -32,17 +33,7 @@
                                 <p><%=item.nome%></p>
                             </div>
         
-                            <!-- <div class="qtItem">
-                                <p><b>Quantidade:</b></p>
-                                <form action="POST">
-                                    <select name="qtItem" id="qtItem">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </form>
-                            </div> -->
-        
+                                   
                         </div>
                     </div>
         
@@ -51,36 +42,28 @@
                             <p><b>Valor Unitário:</b></p>
                             <p>R$ <%=item.preco.toFixed(2)%></p>
                         </div>
-                        <div class="totalUnit">
-                        
+                        <div class="removerItem">
+                            <form id="excluirItem<%=item.idCart%>" action="/checkout/carrinho/<%=item.idCart%>/remover?_method=DELETE" method="POST">
+                                <a href="javascript:document.querySelector('#excluirItem<%=item.idCart%>').submit();"><img src="/images/icones/delete-shopping-cart-symbol.png" alt="Remover"></a>
+                                <!-- <button type="submit">Remover</button> -->
+                            </form>
                         </div>
                     </div>
                 </div>
             <%}} else {%>
                 <div class="containerItem">
                     <div class="item">
+                        <div><%= item.idCart %></div>
                         <div class="imgItem">
-                            <img src="/images/products/<%=produto.img1%>" alt="produto">
+                            <span><%= item.idCart %></span>
+                            <img src="/images/products/<%=item.img1%>" alt="produto">
                         </div>
         
                         <div class="infoItem">
                             
                             <div class="itemDescription">
-                                <p><%=produto.nome%></p>
+                                <p><%=item.nome%></p>
                             </div>
-        
-                            <!-- <div class="qtItem">
-                                <p><b>Quantidade:</b></p>
-                                <form action="POST">
-                                    <select name="qtItem" id="qtItem">
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </form>
-                            </div> -->
-        
                         </div>
                     </div>
         
@@ -89,8 +72,11 @@
                             <p><b>Valor Unitário:</b></p>
                             <p>R$ <%=item.preco.toFixed(2)%></p>
                         </div>
-                        <div class="totalUnit">
-                        
+                        <div class="removerItem">
+                            <form id="excluirItem<%=item.idCart%>" action="/checkout/carrinho/<%=item.idCart%>/remover?_method=DELETE" method="POST">
+                                <a href="javascript:document.querySelector('#excluirItem<%=item.idCart%>').submit();"><img src="/images/icones/delete-shopping-cart-symbol.png" alt="Remover"></a>
+                                <!-- <button type="submit">Remover</button> -->
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -104,14 +90,10 @@
             <div class="resumoCompra">
                 <div>
                     <p><strong>Total da compra:</strong></p>
-                    <!-- <p><strong>Frete: </strong><button>Calcular</button></p>
-                    <p><strong>Total a pagar:</strong></p> -->
+                    
                 </div>
                 <div class="prices">
-                    
-                    <p><%=totalCompra.toFixed(2)%></p>
-                    <!-- <p>R$ 5,00</p>
-                    <p>R$ 40,00</p> -->
+                    <p>R$ <%=totalCompra.toFixed(2)%></p>
                 </div>
             </div>
         </div>
