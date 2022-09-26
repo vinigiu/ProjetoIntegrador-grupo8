@@ -1,6 +1,6 @@
 var express = require('express');
-const { check } = require('express-validator');
 var router = express.Router();
+
 const checkoutController = require('../controllers/checkoutController')
 const estadosController = require('../controllers/estadosController')
 const checkoutVerify = require('../middlewares/checkoutVerify')
