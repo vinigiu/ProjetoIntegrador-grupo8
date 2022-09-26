@@ -12,6 +12,7 @@ router.post('/', checkoutVerify.validate, checkoutVerify.result, checkoutControl
 
 router.get('/carrinho', jwtVerify, checkoutController.carrinho);
 router.post('/carrinho', jwtVerify, checkoutController.addToCart);
+router.delete('/carrinho/:id/remover', checkoutController.removerItem);
 
 
 module.exports = router;
