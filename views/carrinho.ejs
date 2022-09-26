@@ -15,7 +15,7 @@
 <body>
     <%- include('partials/header')%>
 
-    <main>
+    <main id="main-cart">
         <%if(produto == 'undefined') {%>
             <div>Sem produtos</div>
         <%} else {%>
@@ -31,18 +31,7 @@
                             <div class="itemDescription">
                                 <p><%=item.nome%></p>
                             </div>
-        
-                            <!-- <div class="qtItem">
-                                <p><b>Quantidade:</b></p>
-                                <form action="POST">
-                                    <select name="qtItem" id="qtItem">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </form>
-                            </div> -->
-        
+                            
                         </div>
                     </div>
         
