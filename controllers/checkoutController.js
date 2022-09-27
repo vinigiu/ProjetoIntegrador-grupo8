@@ -1,5 +1,4 @@
 const express = require('express');
-const { format } = require('morgan');
 const app = express();
 
 const db = require('../models')
@@ -7,10 +6,10 @@ const db = require('../models')
 
 const checkoutController = {
     checkout: (req,res) => {
-        if(req.session.produto.length > 0) {
-            res.render('checkout', {states:req.session.states, country:req.session.country, totalCompra: req.session.totalCompra, produto: req.session.produto})
+        if(req.session.produto == undefined || req.session.produto.length == 0) {
+            res.redirect('/')
         } else {
-            //tratar o erro de carrinho vazio
+            res.render('checkout', {states:req.session.states, country:req.session.country, totalCompra: req.session.totalCompra, produto: req.session.produto})
         }
     },
 
@@ -89,25 +88,25 @@ const checkoutController = {
     },
     
     finalizar: async (req,res) => {
-        const pedido = {};
-        const dadosPagamento = {};
+        // const pedido = {};
+        // const dadosPagamento = {};
 
-        dadosPagamento.forma_pagamento = req.body.paymentMethod
-        dadosPagamento.bandeira_cartao = req.body.cardType
+        // dadosPagamento.forma_pagamento = req.body.paymentMethod
+        // dadosPagamento.bandeira_cartao = req.body.cardType
 
-        await db.DadoPagamento.create(dadosPagamento)
+        // await db.DadoPagamento.create(dadosPagamento)
+        
+        // pedido.id = 1
+        // pedido.usuario_id = req.session.usuario.id;
+        // pedido.valor_final = req.session.totalCompra;
+        // pedido.dados_pagamentos_id = await db.DadoPagamento.findOne({
+        //     order: [ [ 'id', 'DESC' ]],
+        // });
+        // pedido.status_id = 1 
 
-        pedido.usuario_id = req.session;
-        pedido.valor_final = req.session.totalCompra;
-        pedido.dados_pagamentos_id = await db.DadoPagamento.findOne({
-            order: [ [ 'id', 'DESC' ]],
-        });
-        pedido.status_id = 1 
-
-        await db.Pedido.create(pedido)
+        // await db.Pedido.create(pedido)
         
         res.render("compraEfetuada")
-
     }
 }
 
