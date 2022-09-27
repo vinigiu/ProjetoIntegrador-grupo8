@@ -10,8 +10,7 @@ const checkoutController = {
             res.redirect('/')
         } else {
 
-            res.redirect('/index');
-          
+            res.render('checkout', {produto: req.session.produto, totalCompra: req.session.totalCompra, states: req.session.states, country: req.session.country});
         }
     },
 
