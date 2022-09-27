@@ -136,3 +136,11 @@ main {
     height: 40px;
 
 }
+.botao-link{
+  color: #ffffff;
+}
+
+.botao-link:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
