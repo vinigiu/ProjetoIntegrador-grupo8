@@ -99,26 +99,14 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="username" class="form-label">Usuário</label>
-                                    <div class="input-group has-validation">
-                                        <span class="input-group-text">@</span>
-                                        <input type="text" name="username" class="form-control" id="username" placeholder="Usuário"
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Validar Usuário é obrigatório.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
                                     <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="email@email.com">
+                                    <input type="email" name="email" class="form-control" id="email" value="" placeholder="email@email.com">
                                     <div class="invalid-feedback">
                                         Insira um endereço de e-mail válido para atualizações de envio.
                                     </div>
                                 </div>
 
-                                <div class="col-md-3">
+                                <div class="col-md-12">
                                     <label for="cep" class="form-label">Cep</label>
                                     <input name="cep" type="text" class="form-control" id="cep" placeholder="" required>
                                     <div class="invalid-feedback">
@@ -217,7 +205,8 @@
                                         O nome no cartão é obrigatório
                                     </div>
                                 </div>
-                                
+                            </div>
+                            <div class="my-3">
                                 <div class="form-check">
                                     <input id="mastercard" name="cardType" type="radio" class="form-check-input  bg-success" value="mastercard" checked  required>
                                     <label class="form-check-label" for="credit">Mastercard</label>
@@ -226,7 +215,7 @@
                                     <input id="visa" name="cardType" type="radio" class="form-check-input bg-success" value="visa" required>
                                     <label class="form-check-label" for="debit">Visa</label>
                                 </div>
-
+                            </div>
                                 <div class="col-md-6">
                                     <label for="cc-number" class="form-label">Número do Cartão de Crédito</label>
                                     <input type="text" class="form-control" id="cc-number" placeholder="" required>
@@ -250,7 +239,6 @@
                                         Código de segurança obrigatório
                                     </div>
                                 </div>
-                            </div>
 
                             <hr class="my-4">
 
