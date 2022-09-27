@@ -303,3 +303,6 @@ article h3 {
     }
 }
 
+.form-control{
+    height: 2.8em !important;
+}

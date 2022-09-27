@@ -191,7 +191,7 @@ section a {
 
 footer {
     height: 13.9vh;
-    display: flex;
+    display: flex !important ;
     justify-content: space-between;
     align-items: center;
     justify-self: flex-end;
@@ -503,4 +503,9 @@ footer {
         justify-content: space-between;
         width: 15%;
     }
+}
+
+
+footer{
+    display: flex;
 }
