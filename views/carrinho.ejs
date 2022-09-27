@@ -15,10 +15,12 @@
 <body>
     <%- include('partials/header')%>
 
+
     <main>
         
         <%if((produto == 'undefined') || (produto.length == 0)) {%>
             <div>O carrinho está vazio!</div>
+
         <%} else {%>
             <%if(Array.isArray(produto)) {for(let item of produto){%>
                 <div class="containerItem">
@@ -33,8 +35,7 @@
                             <div class="itemDescription">
                                 <p><%=item.nome%></p>
                             </div>
-        
-                                   
+
                         </div>
                     </div>
         

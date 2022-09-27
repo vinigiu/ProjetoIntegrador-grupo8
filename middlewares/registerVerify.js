@@ -6,7 +6,6 @@ const registerVerify = {
             .notEmpty().withMessage('Email precisa ser preenchido').bail()
             .isEmail().withMessage('Email inválido').bail(),
         body('cpf')
-            .notEmpty().withMessage('Sobrenome precisa ser preenchido').bail()
             .isNumeric().withMessage('Somente caractéres numéricos são aceitos').bail()
             .isLength({ min: 11, max: 11 }).withMessage('CPF deve conter 11 dígitos').bail(),
         body('nome')

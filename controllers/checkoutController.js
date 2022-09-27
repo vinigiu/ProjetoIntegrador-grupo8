@@ -108,6 +108,28 @@ const checkoutController = {
         }
         req.session.totalCompra = totalCompra;
         res.render('carrinho', {produto: req.session.produto, totalCompra: req.session.totalCompra})
+    },
+    
+    finalizar: async (req,res) => {
+        const pedido = {};
+        const dadosPagamento = {};
+
+        dadosPagamento.forma_pagamento = req.body.paymentMethod
+        dadosPagamento.bandeira_cartao = req.body.cardType
+
+        await db.DadoPagamento.create(dadosPagamento)
+
+        pedido.usuario_id = req.session;
+        pedido.valor_final = req.session.totalCompra;
+        pedido.dados_pagamentos_id = await db.DadoPagamento.findOne({
+            order: [ [ 'id', 'DESC' ]],
+        });
+        pedido.status_id = 1 
+
+        await db.Pedido.create(pedido)
+        
+        res.render("compraEfetuada")
+
     }
 }
 

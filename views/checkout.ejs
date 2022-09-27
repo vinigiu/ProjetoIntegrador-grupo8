@@ -24,7 +24,13 @@
                 <div class="py-5 text-center">
                     <h2>Finalizar Compra</h2>
                 </div>
-
+                <% if(typeof errors !== 'undefined') { %>
+                    <ul>
+                        <%for(let error of errors) {%>
+                        <li><%=error.msg%></li>
+                        <%}%>
+                    </ul>
+                <%}%>
                 <div class="row g-5">
                     <div class="col-md-5 col-lg-4 order-md-last">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -72,11 +78,11 @@
                     </div>
                     <div class="col-md-7 col-lg-8">
                         <h4 class="mb-3">Endereço de Entrega</h4>
-                        <form class="needs-validation" novalidate>
+                        <form class="needs-validation" action="/checkout" method="POST" novalidate>
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <label for="firstName" class="form-label">Primeiro Nome</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="" value=""
                                         required>
                                     <div class="invalid-feedback">
                                         Validar Primeiro Nome é obrigatório.
@@ -85,7 +91,7 @@
 
                                 <div class="col-sm-6">
                                     <label for="lastName" class="form-label">Sobrenome</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="" value=""
                                         required>
                                     <div class="invalid-feedback">
                                         Validar Sobrenome é obrigatório.
@@ -96,7 +102,7 @@
                                     <label for="username" class="form-label">Usuário</label>
                                     <div class="input-group has-validation">
                                         <span class="input-group-text">@</span>
-                                        <input type="text" class="form-control" id="username" placeholder="Usuário"
+                                        <input type="text" name="username" class="form-control" id="username" placeholder="Usuário"
                                             required>
                                         <div class="invalid-feedback">
                                             Validar Usuário é obrigatório.
@@ -105,9 +111,8 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="email" class="form-label">Email <span
-                                            class="text-muted">(Opcional)</span></label>
-                                    <input type="email" class="form-control" id="email" placeholder="email@email.com">
+                                    <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="email@email.com">
                                     <div class="invalid-feedback">
                                         Insira um endereço de e-mail válido para atualizações de envio.
                                     </div>
@@ -122,8 +127,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="address" class="form-label">Endereço</label>
-                                    <input type="text" class="form-control" id="address" placeholder="Av. Fulano de Tal"
-                                        required>
+                                    <input type="text" name="address" class="form-control" id="address" placeholder="Av. Fulano de Tal" required>
                                     <div class="invalid-feedback">
                                         Por favor insira seu endereço de entrega.
                                     </div>
@@ -141,14 +145,13 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="address2" class="form-label">Endereço 2 <span
-                                            class="text-muted">(Opcional)</span></label>
-                                    <input type="text" class="form-control" id="address2" placeholder="Sicrano ">
+                                    <label for="address2" class="form-label">Endereço 2 <span class="text-muted">(Opcional)</span></label>
+                                    <input type="text" name="address2" class="form-control" id="address2" placeholder="Sicrano ">
                                 </div>
 
                                 <div class="col-md-5">
                                     <label for="country" class="form-label">País</label>
-                                    <select class="form-select" id="country" required>
+                                    <select name="country" class="form-select" id="country" required>
 
                                         <% country.forEach(countrys=>{ %>
                                             <option value="">
@@ -164,9 +167,7 @@
 
                                 <div class="col-md-4">
                                     <label for="state" class="form-label">Estado</label>
-                                    <input class="form-control" type="text" id="state" required>
-
-                                    </input>
+                                    <input name="state" class="form-control" type="text" id="state" required>
                                     <div class="invalid-feedback">
                                         Forneça um estado válido.
                                     </div>
@@ -194,18 +195,15 @@
 
                             <div class="my-3">
                                 <div class="form-check">
-                                    <input id="credit" name="paymentMethod" type="radio"
-                                        class="form-check-input  bg-success" checked required>
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input  bg-success" value="credit" checked  required>
                                     <label class="form-check-label" for="credit">Cartão de Crédito</label>
                                 </div>
                                 <div class="form-check">
-                                    <input id="debit" name="paymentMethod" type="radio"
-                                        class="form-check-input bg-success" required>
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input bg-success" value="debit" required>
                                     <label class="form-check-label" for="debit">Cartão de Débito</label>
                                 </div>
                                 <div class="form-check">
-                                    <input id="paypal" name="paymentMethod" type="radio"
-                                        class="form-check-input bg-success" required>
+                                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input bg-success" value="paypal" required>
                                     <label class="form-check-label" for="paypal">PayPal</label>
                                 </div>
                             </div>
@@ -218,6 +216,15 @@
                                     <div class="invalid-feedback">
                                         O nome no cartão é obrigatório
                                     </div>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input id="mastercard" name="cardType" type="radio" class="form-check-input  bg-success" value="mastercard" checked  required>
+                                    <label class="form-check-label" for="credit">Mastercard</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="visa" name="cardType" type="radio" class="form-check-input bg-success" value="visa" required>
+                                    <label class="form-check-label" for="debit">Visa</label>
                                 </div>
 
                                 <div class="col-md-6">
