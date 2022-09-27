@@ -1,11 +1,10 @@
 /*********MAIN*********/
-main {
+/* main {
     padding-top: 5vw;
     display: flex;
-    height: 86vh;
     align-items: center;
     justify-content: center;
-}
+} */
 
 #product {
     display: flex;

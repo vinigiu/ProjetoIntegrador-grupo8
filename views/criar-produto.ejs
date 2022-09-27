@@ -21,84 +21,104 @@
 <body>
 
     <%- include('partials/header')%>
-        <main>
+        <main class="container">
             <% if(typeof errors !== 'undefined') { %>
                 <ul>
                     <%for(let error of errors) {%>
                         <li><%=error.msg%></li>
                     <%}%>
                 </ul>
-            <div class="d-flex">
-                <form action="/manipular/criar" method="post" enctype="multipart/form-data">
-                    <label for="nome">Nome do Produto: </label>
-                    <input type="text" name="nome" id="nome" value="<%=old.nome%>">
-                    <br>
-                    <br>
-                    <label for="preco">Preço (inserir centavos com ponto): </label>
-                    <input type="number" name="preco" id="preco" value="<%=old.preco%>">
-                    <br>
-                    <br>
-                    <label for="cor">Cor do Produto: </label>
-                    <input type="text" name="cor" id="cor" value="<%=old.cor%>">
-                    <br>
-                    <br>
-                    <label for="tamanho">Tamanho do Produto: </label>
-                    <input type="text" name="tamanho" id="tamanho" value="<%=old.tamanho%>">
-                    <br>
-                    <br>
-                    <label for="marca">Marca do Produto: </label>
-                    <input type="text" name="marca" id="marca" value="<%=old.marca%>">
-                    <br>
-                    <br>
-                    <label for="descricao">Descrição=: </label>
-                    <textarea name="descricao" id="descricao" cols="30" rows="10" value="<%=old.descricao%>"></textarea>
-                    <br>
-                    <br>
-                    <label for="img1">Imagem 1: </label>
-                    <input type="file" name="img1" id="img1">
-                    <br>
-                    <br>
-                    <label for="img2">Imagem 2: </label>
-                    <input type="file" name="img2" id="img2">
-                    <br>
-                    <br>
-                    <label for="img3">Imagem 3: </label>
-                    <input type="file" name="img3" id="img3">
-                    <br>
-                    <br>
-                    <label for="img4">Imagem 4: </label>
-                    <input type="file" name="img4" id="img4">
-                    <br>
-                    <br>
-                    <label for="qtd_estoque">Quantidade em Estoque: </label>
-                    <input type="number" name="qtd_estoque" id="qtd_estoque" value="<%=old.qtd_estoque%>">
-                    <br>
-                    <br>
-                    <label for="categorias_id">ID da Categoria: </label>
-                    <input type="number" name="categorias_id" id="categorias_id" value="<%=old.categorias_id%>">
-                    <br>
-                    <br>
-                    <button type="submit">logo</button>
-                </form>
-            </div>
+            <div class="container mx-auto">
+                    <h1 class="h1 mb-3">Cadastro de Produtos</h1>
+                    <form class="" action="/manipular/criar" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome do Produto</label>
+                                <input type="text" class="form-control" name="nome" id="nome">
+                            </div>
+                        </div>                    
+                    <div class="mb-3">
+                        <label for="preco" class="form-label">Preço (inserir centavos com ponto):</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">R$</span>
+                                <input type="number" class="form-control"  name="preco" id="preco" aria-label="Amount (to the nearest dollar)">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        
+                    </div>
+                    <div class="mb-3">                        
 
-            <!-- Form Bootstrap -->
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="cor" class="form-label">Cor Produto: </label>
+                            <input type="text" name="cor" id="cor" class="form-control" title="Choose your color">
+                        
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label" for="tamanho">Tamanho do Produto: </label>
+                            <input type="text" name="tamanho" class="form-control" id="tamanho">
+                        
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label" for="marca">Marca do Produto: </label>
+                            <input class="form-control" type="text" name="marca" id="marca">
+                        
+                    </div>
+                    <div class="mb-3">
+
+                            <div class="form-floating">
+                                <label for="descricao">Descrição: </label>
+                                <textarea class="form-control" placeholder="Descreva aqui seu produto" name="descricao" id="descricao style="height: 100px"></textarea>
+                            </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label" for="img1">Imagem 1: </label>
+                            <input class="form-control" type="file" name="img1" id="img1">                              
+                        
+                    </div>
+
+                    <div class="mb-3">
+                    
+                        <label class="form-label" for="img2">Imagem 2: </label>
+                        <input class="form-control" type="file" name="img2" id="img2">
+                    
+                    
+                    </div>
+                    <div class="mb-3">
+                    
+                        <label class="form-label" for="img3">Imagem 3: </label>
+                        <input class="form-control" type="file" name="img3" id="img3">
+                    
+                    
+                    </div>
+                    <div class="mb-3">
+                    
+                        <label class="form-label" for="img4">Imagem 4: </label>
+                        <input class="form-control" type="file" name="img4" id="img4">
+                    
+                    
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label"  for="qtd_estoque">Quantidade em Estoque: </label>
+                            <input class="form-control" type="number" name="qtd_estoque" id="qtd_estoque">
+                        
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label" for="categorias_id">ID da Categoria: </label>
+                            <input class="form-control" type="number" name="categorias_id" id="categorias_id">
+                        
+                    </div>
+
+                    
+                    
+                        <button class="col-12 btn btn-success mb-3"type="submit"  >Enviar</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
             <%} else {%>
                 <div class="container mx-auto">
                     <h1 class="h1 mb-3">Cadastro de Produtos</h1>
@@ -147,43 +167,47 @@
                     <div class="mb-3">
                         
                             <label class="form-label" for="img1">Imagem 1: </label>
-                            <input class="form-control" type="file" name="img1" id="img1">
-                              
+                            <input class="form-control" type="file" name="img1" id="img1">                              
                         
                     </div>
+
+                    <div class="mb-3">
                     
-                    <div>
-                        
-                            <label for="img2">Imagem 2: </label>
-                            <input type="file" name="img2" id="img2">
-                        
-                    </div>
-                    <div>
-                        
-                            <label for="img3">Imagem 3: </label>
-                            <input type="file" name="img3" id="img3">
-                        
-                    </div>
-                    <div>
-                        
-                            <label for="img4">Imagem 4: </label>
-                            <input type="file" name="img4" id="img4">
-                        
-                    </div>
-                    <div>
-                        
-                            <label for="qtd_estoque">Quantidade em Estoque: </label>
-                            <input type="number" name="qtd_estoque" id="qtd_estoque">
-                        
-                    </div>
-                    <div>
-                        
-                            <label for="categorias_id">ID da Categoria: </label>
-                            <input type="number" name="categorias_id" id="categorias_id">
-                        
-                    </div>
+                        <label class="form-label" for="img2">Imagem 2: </label>
+                        <input class="form-control" type="file" name="img2" id="img2">
                     
-                        <button type="submit">Enviar</button>
+                    
+                    </div>
+                    <div class="mb-3">
+                    
+                        <label class="form-label" for="img3">Imagem 3: </label>
+                        <input class="form-control" type="file" name="img3" id="img3">
+                    
+                    
+                    </div>
+                    <div class="mb-3">
+                    
+                        <label class="form-label" for="img4">Imagem 4: </label>
+                        <input class="form-control" type="file" name="img4" id="img4">
+                    
+                    
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label"  for="qtd_estoque">Quantidade em Estoque: </label>
+                            <input class="form-control" type="number" name="qtd_estoque" id="qtd_estoque">
+                        
+                    </div>
+                    <div class="mb-3">
+                        
+                            <label class="form-label" for="categorias_id">ID da Categoria: </label>
+                            <input class="form-control" type="number" name="categorias_id" id="categorias_id">
+                        
+                    </div>
+
+                    
+                    
+                        <button class="col-12 btn btn-success mb-3"type="submit"  >Enviar</button>
                     </form>
                 </div>
                 <!-- Form Bootstrap -->

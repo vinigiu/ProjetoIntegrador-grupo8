@@ -80,8 +80,9 @@ header {
 
 /*********MAIN*********/
 main {
-    padding-top: 13vh;
+    padding-top: 18vh;
     background-color: #EEEEEE;
+    display: flex;
 }
 
 #notLogged {
