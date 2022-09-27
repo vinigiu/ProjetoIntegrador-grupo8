@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
     <%- include('partials/header')%>
@@ -23,35 +28,50 @@
 
         <%} else {%>
             <%if(Array.isArray(produto)) {for(let item of produto){%>
-                <div class="containerItem">
-                    <div class="item">
-                        <div><%= item.idCart %></div>
-                        <div class="imgItem">
-                            <img src="/images/products/<%=item.img1%>" alt="produto">
+                
+                <!-- cart bootstrap -->
+                <div class="card rounded-3 mb-4 mx-3">
+                    <div class="card-body p-4">
+                      <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-md-2 col-lg-2 col-xl-2">
+                          <img
+                            src="/images/products/<%=item.img1%>"
+                            class="img-fluid rounded-3" alt="bone">
                         </div>
-        
-                        <div class="infoItem">
-                            
-                            <div class="itemDescription">
-                                <p><%=item.nome%></p>
-                            </div>
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                          <p class="lead fw-normal mb-2"><%=item.nome%></p>                          
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                          <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="bi bi-dash-square"></i>
+                          </button>
+          
+                          <input id="form1" min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm" />
+          
+                          <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="bi bi-plus-square"></i>
+                          </button>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                          <h5 class="mb-0">R$ <%=item.preco.toFixed(2)%></h5>
+                        </div>
+                        <div class="col-md-1 col-lg-1 col-xl-1 text-end removerItem">
+                          <form id="excluirItem<%=item.idCart%>" action="/checkout/carrinho/<%=item.idCart%>/remover?_method=DELETE" method="POST">
+                            <a href="javascript:document.querySelector('#excluirItem<%=item.idCart%>').submit();" class="text-danger">
+                                <i class="bi bi-trash fa-lg">
 
+                                </i>
+                            </a>
+                        </form>
                         </div>
-                    </div>
-        
-                    <div class="price">
-                        <div class="priceUnit">
-                            <p><b>Valor Unitário:</b></p>
-                            <p>R$ <%=item.preco.toFixed(2)%></p>
-                        </div>
-                        <div class="removerItem">
-                            <form id="excluirItem<%=item.idCart%>" action="/checkout/carrinho/<%=item.idCart%>/remover?_method=DELETE" method="POST">
-                                <a href="javascript:document.querySelector('#excluirItem<%=item.idCart%>').submit();"><img src="/images/icones/delete-shopping-cart-symbol.png" alt="Remover"></a>
-                                <!-- <button type="submit">Remover</button> -->
-                            </form>
-                        </div>
+                      </div>
                     </div>
                 </div>
+
+
             <%}} else {%>
                 <div class="containerItem">
                     <div class="item">
@@ -84,21 +104,41 @@
                 </div>
             <%}%>
         <%}%>
-        <div class="dadosCompra">
-            <div class="botoes">
-                <div class="botao"><a href="/">Adicionar mais itens</a></div>
-                <div class="botao"><a href="/checkout">Finalizar compra</a></div>
+        
+
+        <!-- total bootstrap -->
+        <div class="col-12">
+            <div class="card mb-4">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Total</h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">                  
+                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                    Envio
+                    <span>Gratis</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                    <div>
+                      <strong>Total da Compra</strong>                      
+                    </div>
+                    <span><strong>R$ <%=totalCompra.toFixed(2)%></strong></span>
+                  </li>
+                </ul>
+                <div class="d-flex justify-content-center">
+                    <button  type="button" class="col-4 btn btn-success btn-lg m-3">
+                        <a class="botao-link" href="/">Adiconar mais Itens</a>
+                    </button>
+                    <button type="button" class="col-4 btn btn-success btn-lg m-3">
+                        <a class="botao-link" href="/checkout">Ir para Checkout</a>
+                    </button>
+                </div>
             </div>
-            <div class="resumoCompra">
-                <div>
-                    <p><strong>Total da compra:</strong></p>
-                    
-                </div>
-                <div class="prices">
-                    <p>R$ <%=totalCompra.toFixed(2)%></p>
-                </div>
             </div>
         </div>
+        </div>
+    </div>
     </main>
         
     <%- include('partials/footer')%>
