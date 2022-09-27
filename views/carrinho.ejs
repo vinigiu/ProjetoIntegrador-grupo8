@@ -17,6 +17,7 @@
 
 
     <main>
+        
         <%if((produto == 'undefined') || (produto.length == 0)) {%>
             <div>O carrinho está vazio!</div>
 
@@ -54,7 +55,7 @@
             <%}} else {%>
                 <div class="containerItem">
                     <div class="item">
-                        <div><%= item.idCart %></div>
+                        <div class="numero-id"><%= item.idCart %></div>
                         <div class="imgItem">
                             <span><%= item.idCart %></span>
                             <img src="/images/products/<%=item.img1%>" alt="produto">

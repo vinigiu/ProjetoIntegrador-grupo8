@@ -9,7 +9,9 @@ const checkoutController = {
         if(req.session.produto == undefined || req.session.produto.length == 0) {
             res.redirect('/')
         } else {
-            res.render('checkout', {states:req.session.states, country:req.session.country, totalCompra: req.session.totalCompra, produto: req.session.produto})
+
+            res.redirect('/index');
+          
         }
     },
 
@@ -17,12 +19,17 @@ const checkoutController = {
         let totalCompra = 0;
         
         let idCart = 1;
-        for(let item of req.session.produto) {
-            totalCompra += item.preco;
-            req.session.produto.idCart = idCart;
-            idCart += 1;
+        if(req.session.produto !== undefined) {
+            for(let item of req.session.produto) {
+                totalCompra += item.preco;
+                req.session.produto.idCart = idCart;
+                idCart += 1;
+            }
+        } else {
+            req.session.produto = [];
         }
 
+        console.log('Vou imprimir os produtos da session que vão para o carrinho:')
         console.log(req.session.produto);
         res.render('carrinho', {produto: req.session.produto, totalCompra: totalCompra})
     },
@@ -30,23 +37,38 @@ const checkoutController = {
     addToCart: async(req,res) => {
         const produtoID = req.session.produtoID;
         const produto = await db.Produto.findByPk(produtoID);
+        const {idCart, id, nome, descricao, preco, img1} = produto;   //novoItem passa a receber apenas os parametros listados
         
-        let oldSession = req.session.produto;
-        req.session.produto = [];
+        const novoItem = {
+            idCart: idCart, 
+            id: id, 
+            nome: nome,
+            descricao: descricao, 
+            preco: preco,
+            img1: img1
+        };
 
+        let oldSession = req.session.produto;
+        req.session.produto=[];
+        
         if(oldSession !== undefined) {
-            let idCart = 1;     //gera o índice para o carrinho
+            novoItem.idCart = oldSession.length + 1;
+            
+            console.log("Imprimindo a partir do segundo item da session:");
+            console.log('id: '+ novoItem.id + ' | ' + novoItem.nome + ' | ' + novoItem.preco + ' | ' + novoItem.idCart + ' | '+ novoItem.descricao);
+
             for(let item of oldSession) {
-                item.idCart = idCart;
                 req.session.produto.push(item);
-                idCart += 1;
             }
-            produto.idCart = idCart;
-            req.session.produto.push(produto);
+            
+            //req.session.produto.push(produto);
+            req.session.produto.push(novoItem);
         
         } else {
-            produto.idCart = 1;
-            req.session.produto.push(produto)
+            novoItem.idCart = 1;
+            
+            req.session.produto.push(novoItem);
+            // req.session.produto.push(produto)
         }
 
         //Calcula o total do carrinho e passa para a session
@@ -56,6 +78,8 @@ const checkoutController = {
         }
         req.session.totalCompra = totalCompra;
 
+        console.log("Vou imprimir a Session do addToCart:")
+        console.log(req.session.produto)
         res.render('carrinho', {produto:req.session.produto, totalCompra: req.session.totalCompra})
     },
 
