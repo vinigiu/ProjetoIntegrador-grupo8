@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zé Boné - Tudo para sua cabeça</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/stylesCheck.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="form-validation.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+    <%- include('partials/header')%>
+        <div class="container">
+            <main>
+                <div class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </main>
+        </div>
+        <%- include('partials/footer')%>
+</body>
+<script src="/javascripts/endComplete.js"></script>
+
+</html>
