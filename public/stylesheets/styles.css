@@ -85,6 +85,10 @@ main {
     display: flex;
 }
 
+.main-index{
+    display: block;
+}
+
 #notLogged {
     height: 83vh;
     display: flex;
