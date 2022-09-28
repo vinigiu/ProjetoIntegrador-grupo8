@@ -80,8 +80,13 @@ header {
 
 /*********MAIN*********/
 main {
-    padding-top: 13vh;
+    padding-top: 18vh;
     background-color: #EEEEEE;
+    display: flex;
+}
+
+.main-index{
+    display: block;
 }
 
 #notLogged {
@@ -191,7 +196,7 @@ section a {
 
 footer {
     height: 13.9vh;
-    display: flex;
+    display: flex !important ;
     justify-content: space-between;
     align-items: center;
     justify-self: flex-end;
@@ -503,4 +508,9 @@ footer {
         justify-content: space-between;
         width: 15%;
     }
+}
+
+
+footer{
+    display: flex;
 }

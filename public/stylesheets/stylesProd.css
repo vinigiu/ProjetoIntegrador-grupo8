@@ -1,11 +1,10 @@
 /*********MAIN*********/
-main {
+/* main {
     padding-top: 5vw;
     display: flex;
-    height: 86vh;
     align-items: center;
     justify-content: center;
-}
+} */
 
 #product {
     display: flex;
@@ -303,3 +302,6 @@ article h3 {
     }
 }
 
+.form-control{
+    height: 2.8em !important;
+}
