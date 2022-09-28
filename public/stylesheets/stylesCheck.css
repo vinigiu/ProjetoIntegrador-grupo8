@@ -15,7 +15,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
+main {
+  flex-direction: column;
+  padding-top: 12vh;
+}
 
 .imagem-logo {
   height: 59px;
