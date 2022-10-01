@@ -21,37 +21,37 @@
   
 <!-------- LOGIN -------->
 
-    <div class="login">
-      <% if(typeof error !== 'undefined') { %>
-        <ul>
-          <li style="color:red"><%=error%></li>
-        </ul>
-      <%}%>
-
-      
-      <div class="container" id="container">
-        <div class="form-container sign-in-container">
-          <form action="/users/login" method="POST">
-            <h1>Entre</h1>
+      <div class="login">
+        <% if(typeof error !== 'undefined') { %>
+          <ul>
+            <li style="color:red"><%=error%></li>
+          </ul>
+        <%}%>
   
-            <input type="email" name="email" placeholder="Email" />
-            <input type="password" name="senha" placeholder="Senha" />
-            <!-- <a href="#">Esqueci minha senha</a> -->
-            <button id="entrar" type="submit">Entrar</button>
-          </form>
-        </div>
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-right">
-              <h1>Não tem conta?</h1>
-              <p>Faça seu cadastro!</p>
-              <button class="ghost" id="register"><a href="/users/cadastro"> Registre-se!</a>
-               
-              </button>
+        
+        <div class="container" id="container">
+          <div class="form-container sign-in-container">
+            <form action="/users/login" method="POST">
+              <h1>Entre</h1>
+    
+              <input type="email" name="email" placeholder="Email" />
+              <input type="password" name="senha" placeholder="Senha" />
+              <!-- <a href="#">Esqueci minha senha</a> -->
+              <button id="entrar" type="submit">Entrar</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-right">
+                <h1>Não tem conta?</h1>
+                <p>Faça seu cadastro!</p>
+                <button class="ghost" id="register"><a href="/users/cadastro"> Registre-se!</a>
+                
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
   <!-------- FOOTER -------->
   <%- include('partials/footer')%>
 </body>

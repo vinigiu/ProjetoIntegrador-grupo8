@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zé Boné - Tudo para sua cabeça</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/stylesProd.css">
+    <link rel="stylesheet" href="/stylesheets/stylesCreateProd.css">
     <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,9 +40,7 @@
                     <div class="mb-3">
                         <label for="preco" class="form-label">Preço (inserir centavos com ponto):</label>
                             <div class="input-group mb-3">
-                                <span class="input-group-text">R$</span>
                                 <input type="number" class="form-control"  name="preco" id="preco" aria-label="Amount (to the nearest dollar)">
-                                <span class="input-group-text">.00</span>
                             </div>
                         
                     </div>
@@ -210,29 +208,9 @@
                         <button class="col-12 btn btn-success mb-3"type="submit"  >Enviar</button>
                     </form>
                 </div>
-                <!-- Form Bootstrap -->
-            <!-- <div class="container">
-                <form>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div> -->
             <%}%>
         </main>
-
-    <%- include('partials/footer')%>
+        <%- include('partials/footer')%>
 </body>
 
 </html>
